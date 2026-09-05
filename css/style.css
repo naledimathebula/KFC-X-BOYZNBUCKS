@@ -927,3 +927,410 @@ body {
 .next:hover {
     transform: translateX(5px);
 }
+
+
+
+
+/* =========================================
+   PAGE 03 — WHO ARE BOYZnBUCK$?
+========================================= */
+
+.boyz-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 3rem 4rem 8rem;
+
+    background: var(--black);
+    color: var(--white);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PAGE 03 TOP BAR
+========================================= */
+
+.boyz-top {
+    position: absolute;
+
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.boyz-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding-top: 12vh;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   INTRO LABEL
+========================================= */
+
+.boyz-page .intro-label {
+    margin-bottom: 1rem;
+
+    color: var(--kfc-red);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+
+    letter-spacing: 0.3em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.boyz-heading {
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(6rem, 15vw, 15rem);
+
+    line-height: 0.78;
+
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+
+    text-transform: uppercase;
+}
+
+
+.boyz-heading span {
+    color: var(--kfc-red);
+}
+
+
+/* =========================================
+   INTRO STATEMENT
+========================================= */
+
+.boyz-intro {
+    max-width: 700px;
+
+    margin-top: 3rem;
+
+    padding-left: 1rem;
+
+    border-left: 3px solid var(--kfc-red);
+}
+
+
+.boyz-intro .intro-statement {
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(2rem, 4vw, 4rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   INFORMATION GRID
+========================================= */
+
+.boyz-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 3rem;
+
+    margin-top: 7rem;
+}
+
+
+/* =========================================
+   INFORMATION BLOCK
+========================================= */
+
+.info-block {
+    position: relative;
+
+    padding-top: 1.5rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.info-number {
+    display: block;
+
+    margin-bottom: 2rem;
+
+    color: var(--kfc-red);
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+}
+
+
+.info-block h2 {
+    margin-bottom: 1.5rem;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(2rem, 3vw, 3.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 400;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+
+.info-block h2 span {
+    color: var(--kfc-red);
+}
+
+
+.info-block p {
+    margin-bottom: 1rem;
+
+    max-width: 400px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   CLOSING STATEMENT
+========================================= */
+
+.info-block strong {
+    display: block;
+
+    margin-top: 2rem;
+
+    color: var(--kfc-red);
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    letter-spacing: -0.01em;
+}
+
+
+/* =========================================
+   PAGE 03 BACKGROUND DETAIL
+========================================= */
+
+.boyz-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 55vw;
+    height: 55vw;
+
+    right: -25vw;
+    top: 10vh;
+
+    border: 1px solid rgba(228, 0, 43, 0.15);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.boyz-page::after {
+    content: "03";
+
+    position: absolute;
+
+    right: 3rem;
+    bottom: 5rem;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: 18rem;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   PAGE 03 TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .boyz-page {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+
+    .boyz-top {
+        left: 2rem;
+        right: 2rem;
+    }
+
+
+    .boyz-content {
+        padding-top: 10vh;
+    }
+
+
+    .boyz-heading {
+        font-size: clamp(5rem, 14vw, 10rem);
+    }
+
+
+    .boyz-info {
+        grid-template-columns: 1fr;
+
+        gap: 4rem;
+
+        margin-top: 5rem;
+    }
+
+
+    .info-block p {
+        max-width: 650px;
+    }
+
+
+    .boyz-page::after {
+        right: 1rem;
+
+        font-size: 12rem;
+    }
+}
+
+
+/* =========================================
+   PAGE 03 MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .boyz-page {
+        min-height: 100svh;
+
+        padding: 1.5rem 1.5rem 7rem;
+    }
+
+
+    .boyz-top {
+        top: 1.5rem;
+
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+
+    .boyz-content {
+        padding-top: 18vh;
+    }
+
+
+    .boyz-page .intro-label {
+        font-size: 0.65rem;
+    }
+
+
+    .boyz-heading {
+        font-size: clamp(4rem, 20vw, 7rem);
+
+        line-height: 0.82;
+    }
+
+
+    .boyz-intro {
+        margin-top: 2.5rem;
+
+        padding-left: 0.8rem;
+    }
+
+
+    .boyz-intro .intro-statement {
+        font-size: clamp(1.8rem, 9vw, 3rem);
+    }
+
+
+    .boyz-info {
+        margin-top: 4rem;
+
+        gap: 3rem;
+    }
+
+
+    .info-block h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .info-block p {
+        font-size: 0.9rem;
+    }
+
+
+    .info-block strong {
+        font-size: 1.8rem;
+    }
+
+
+    .boyz-page::after {
+        font-size: 8rem;
+
+        right: 0.5rem;
+        bottom: 5rem;
+    }
+}
