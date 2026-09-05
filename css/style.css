@@ -1,25 +1,22 @@
-/* =========================================
+/* =========================================================
    KFC × BOYZNBUCK$
-
-   PAGE 01 — COVER
-========================================= */
-
-
-/* =========================================
-   COLOUR SYSTEM
-========================================= */
+   GLOBAL STYLE SYSTEM
+   PAGES 01 — 03
+========================================================= */
 
 :root {
     --black: #000000;
     --white: #ffffff;
     --kfc-red: #e4002b;
     --soft-white: #f5f5f5;
+    --muted-white: rgba(255, 255, 255, 0.68);
+    --faint-white: rgba(255, 255, 255, 0.45);
 }
 
 
-/* =========================================
+/* =========================================================
    RESET
-========================================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -27,555 +24,272 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     width: 100%;
     min-height: 100vh;
-
     background: var(--black);
     color: var(--white);
-
     font-family: "Inter", Arial, Helvetica, sans-serif;
-
     overflow-x: hidden;
 }
 
+a {
+    color: inherit;
+}
 
-/* =========================================
-   COVER
-========================================= */
+
+/* =========================================================
+   PAGE 01 — COVER
+========================================================= */
 
 .cover {
     position: relative;
-
     width: 100%;
     min-height: 100vh;
-
+    min-height: 100svh;
     padding: 3rem 4rem;
+    background: var(--black);
+    color: var(--white);
+    overflow: hidden;
 
     display: flex;
-    align-items: center;
-
-    background: var(--black);
-
-    overflow: hidden;
+    flex-direction: column;
 }
 
 
-/* =========================================
-   TOP BAR
-========================================= */
+/* TOP BAR */
 
 .cover-top {
-    position: absolute;
-
-    top: 3rem;
-    left: 4rem;
-    right: 4rem;
-
+    position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     z-index: 10;
 }
 
-
-/* =========================================
-   BRAND LABEL
-========================================= */
-
 .brand-label {
-    display: flex;
-    align-items: center;
-
-    gap: 0.8rem;
-
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 800;
-
-    letter-spacing: 0.12em;
-
+    letter-spacing: 0.15em;
     text-transform: uppercase;
 }
-
 
 .brand-label span {
     color: var(--kfc-red);
 }
 
-
-/* =========================================
-   PAGE NUMBER
-========================================= */
-
-.page-number {
-    font-size: 0.7rem;
-
-    font-weight: 600;
-
-    letter-spacing: 0.15em;
-
-    color: rgba(255, 255, 255, 0.5);
+.cover .page-number {
+    color: var(--faint-white);
 }
 
 
-/* =========================================
-   MAIN CONTENT
-========================================= */
+/* COVER CONTENT */
 
 .cover-content {
     position: relative;
+    flex: 1;
 
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    width: 100%;
-    max-width: 1500px;
-
-    margin: 0 auto;
+    padding: 8vh 0 6vh;
+    z-index: 5;
 }
-
-
-/* =========================================
-   BRIEF
-========================================= */
 
 .brief {
     margin-bottom: 1rem;
 
-    font-size: clamp(0.75rem, 1vw, 1rem);
-
-    font-weight: 700;
-
-    letter-spacing: 0.3em;
-
     color: var(--kfc-red);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
 }
 
 
-/* =========================================
-   MAIN TITLE
-========================================= */
+/* MAIN TITLE */
 
 .main-title {
-    font-family: "Anton", Impact, sans-serif;
-
-    font-size: clamp(5rem, 14vw, 13rem);
-
-    line-height: 0.82;
-
-    font-weight: 400;
-
-    letter-spacing: -0.035em;
-
-    text-transform: uppercase;
-
-    white-space: nowrap;
-
     display: flex;
-    align-items: baseline;
-    gap: 0.25em;
+    flex-direction: column;
+
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(6rem, 16vw, 16rem);
+    font-weight: 400;
+    line-height: 0.78;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
 }
-
-
-/* =========================================
-   KFC X — WHITE
-========================================= */
 
 .kfc-title {
     color: var(--white);
 }
-
-
-/* =========================================
-   BOYZNBUCK$ — RED
-========================================= */
 
 .boyz-title {
     color: var(--kfc-red);
 }
 
 
-/* =========================================
-   RED LINE
-========================================= */
+/* TITLE LINE */
 
 .title-line {
-    width: 100%;
+    width: min(500px, 45vw);
+    height: 1px;
 
-    height: 2px;
+    margin-top: 2.5rem;
 
-    margin-top: 2rem;
-
-    background: var(--kfc-red);
-
-    transform-origin: left;
+    background: rgba(255, 255, 255, 0.35);
 }
 
 
-/* =========================================
-   BOTTOM CONTENT
-========================================= */
+/* BOTTOM CONTENT */
 
 .bottom-content {
     display: flex;
-
     align-items: flex-end;
-
     justify-content: space-between;
-
-    gap: 3rem;
 
     margin-top: 5rem;
 }
 
-
-/* =========================================
-   PRESENTED BY
-========================================= */
-
 .presented {
     display: flex;
-
     flex-direction: column;
-
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
-
 
 .presented span {
-    font-size: 0.65rem;
+    color: var(--faint-white);
 
-    font-weight: 600;
-
-    letter-spacing: 0.2em;
-
-    color: rgba(255, 255, 255, 0.55);
-}
-
-
-.presented strong {
-    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
-
+    font-size: 0.6rem;
     font-weight: 700;
-
-    letter-spacing: 0.08em;
-
+    letter-spacing: 0.2em;
     text-transform: uppercase;
 }
 
-
-/* =========================================
-   CULTURAL OWNERSHIP
-========================================= */
+.presented strong {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
 
 .theme {
     display: flex;
-
     flex-direction: column;
 
-    text-align: right;
-
     font-family: "Anton", Impact, sans-serif;
-
     font-size: clamp(2rem, 4vw, 4.5rem);
-
-    line-height: 0.9;
-
-    letter-spacing: -0.02em;
-
+    line-height: 0.8;
+    text-align: right;
     text-transform: uppercase;
 }
-
 
 .theme-white {
     color: var(--white);
 }
-
 
 .theme-red {
     color: var(--kfc-red);
 }
 
 
-/* =========================================
-   SCROLL INDICATOR
-========================================= */
+/* SCROLL INDICATOR */
 
 .scroll-indicator {
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 50%;
-    transform: translateX(-50%);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+
     color: var(--white);
     text-decoration: none;
-    font-size: 0.65rem;
+
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.scroll-indicator span:first-child {
+    font-size: 0.55rem;
     font-weight: 700;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    z-index: 20;
 }
 
 .scroll-arrow {
     color: var(--kfc-red);
+    font-size: 1.2rem;
 
-    font-size: 1rem;
-
-    animation: arrowBounce 1.8s ease-in-out infinite;
+    animation: arrowBounce 1.5s ease-in-out infinite;
 }
 
 
-/* =========================================
-   SUBTLE BACKGROUND DETAIL
-========================================= */
+/* PAGE 01 BACKGROUND */
 
 .cover::before {
     content: "";
 
     position: absolute;
+    width: 55vw;
+    height: 55vw;
 
-    width: 45vw;
-    height: 45vw;
+    right: -20vw;
+    bottom: -30vw;
 
-    right: -15vw;
-    bottom: -20vw;
-
-    border: 1px solid rgba(228, 0, 43, 0.2);
-
+    border: 1px solid rgba(228, 0, 43, 0.18);
     border-radius: 50%;
 
     pointer-events: none;
 }
 
+.cover::after {
+    content: "01";
 
-/* =========================================
-   ARROW ANIMATION
-========================================= */
+    position: absolute;
+    right: 3rem;
+    bottom: -3rem;
 
-@keyframes arrowBounce {
+    font-family: "Anton", Impact, sans-serif;
+    font-size: 18rem;
+    line-height: 1;
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
+    color: rgba(255, 255, 255, 0.025);
 
-    50% {
-        transform: translateY(7px);
-    }
+    pointer-events: none;
 }
 
 
-/* =========================================
-   PAGE LOAD ANIMATION STATES
-========================================= */
-
-.brand-label {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-
-.page-number {
-    opacity: 0;
-}
-
-
-.brief {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-
-.kfc-title {
-    opacity: 0;
-    transform: translateX(-80px);
-}
-
-
-.boyz-title {
-    opacity: 0;
-    transform: translateX(80px);
-}
-
-
-.title-line {
-    opacity: 0;
-    transform: scaleX(0);
-}
-
-
-.presented {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-
-.theme {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-
-.scroll-indicator {
-    opacity: 0;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-    .cover {
-        padding: 2rem;
-    }
-
-
-    .cover-top {
-        top: 2rem;
-
-        left: 2rem;
-        right: 2rem;
-    }
-
-
-    .main-title {
-        white-space: normal;
-
-        flex-wrap: wrap;
-
-        gap: 0.15em;
-    }
-
-
-    .bottom-content {
-        margin-top: 4rem;
-    }
-
-
-    .scroll-indicator {
-        left: 2rem;
-        bottom: 2rem;
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .cover {
-        min-height: 100svh;
-
-        padding: 1.5rem;
-    }
-
-
-    .cover-top {
-        top: 1.5rem;
-
-        left: 1.5rem;
-        right: 1.5rem;
-    }
-
-
-    .brand-label {
-        font-size: 0.65rem;
-
-        gap: 0.45rem;
-
-        letter-spacing: 0.08em;
-    }
-
-
-    .page-number {
-        font-size: 0.55rem;
-    }
-
-
-    .main-title {
-        font-size: clamp(4rem, 19vw, 7rem);
-
-        line-height: 0.85;
-
-        gap: 0.12em;
-    }
-
-
-    .title-line {
-        margin-top: 1.5rem;
-    }
-
-
-    .bottom-content {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        margin-top: 3rem;
-
-        gap: 2.5rem;
-    }
-
-
-    .theme {
-        text-align: left;
-
-        font-size: clamp(2.5rem, 13vw, 4rem);
-    }
-
-
-    .scroll-indicator {
-        display: none;
-    }
-}
-
-
-
-/* =========================================
-   PAGE 02 — GENIUS NALEDI MATHEBULA
-========================================= */
-
-
-/* =========================================
-   PAGE 02 BASE
-========================================= */
+/* =========================================================
+   PAGE 02 — GENIUS
+========================================================= */
 
 .genius-page {
     position: relative;
-
     width: 100%;
     min-height: 100vh;
+    min-height: 100svh;
 
-    padding: 3rem 4rem;
-
-    display: flex;
-    align-items: center;
+    padding: 3rem 4rem 8rem;
 
     background: var(--black);
-
     color: var(--white);
 
     overflow: hidden;
 }
 
 
-/* =========================================
-   PAGE 02 TOP BAR
-========================================= */
+/* TOP BAR */
 
 .genius-top {
     position: absolute;
@@ -588,352 +302,164 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    z-index: 10;
+    z-index: 20;
+}
+
+.genius-top .page-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.genius-top .page-number {
+    color: var(--faint-white);
 }
 
 
-.page-label {
+/* MAIN CONTENT */
+
+.genius-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: calc(100vh - 12rem);
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 3rem;
+
+    z-index: 5;
+}
+
+
+/* A PITCH BY */
+
+.genius-content .intro-label {
+    margin-bottom: 1.5rem;
+
+    color: var(--kfc-red);
+
     font-size: 0.75rem;
-
     font-weight: 800;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
 
-    letter-spacing: 0.15em;
+    opacity: 0;
+    animation: page2LabelIn 0.8s ease forwards;
+    animation-delay: 0.15s;
+}
+
+
+/* NAME */
+
+.genius-name {
+    max-width: 1000px;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(5rem, 12vw, 12rem);
+    font-weight: 400;
+    line-height: 0.78;
+    letter-spacing: -0.04em;
 
     text-transform: uppercase;
 
     color: var(--white);
+
+    opacity: 0;
+
+    animation: page2NameIn 1s ease forwards;
+    animation-delay: 0.3s;
 }
-
-
-/* =========================================
-   PAGE 02 CONTENT
-========================================= */
-
-.genius-content {
-    width: 100%;
-    max-width: 1500px;
-
-    margin: 0 auto;
-
-    position: relative;
-
-    z-index: 2;
-}
-
-
-/* =========================================
-   INTRO LABEL
-========================================= */
-
-.intro-label {
-    margin-bottom: 1.5rem;
-
-    font-size: 0.8rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.3em;
-
-    color: var(--kfc-red);
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================
-   GENIUS NAME
-========================================= */
-
-.genius-name {
-    max-width: 1200px;
-
-    font-family: "Anton", Impact, sans-serif;
-
-    font-size: clamp(5rem, 12vw, 12rem);
-
-    line-height: 0.82;
-
-    font-weight: 400;
-
-    letter-spacing: -0.035em;
-
-    text-transform: uppercase;
-}
-
-
-/* =========================================
-   NAME ACCENT
-========================================= */
 
 .genius-name span {
     color: var(--kfc-red);
 }
 
 
-/* =========================================
-   DIVIDER
-========================================= */
+/* DIVIDER */
 
 .genius-divider {
-    width: 100%;
-
-    height: 2px;
-
-    margin-top: 3rem;
-
-    background: var(--kfc-red);
-}
-
-
-/* =========================================
-   DESCRIPTION
-========================================= */
-
-.genius-description {
-    max-width: 650px;
-
-    margin-top: 3rem;
-}
-
-
-.genius-description p {
-    font-size: clamp(1rem, 1.6vw, 1.5rem);
-
-    line-height: 1.5;
-
-    font-weight: 500;
-
-    letter-spacing: -0.01em;
-
-    color: var(--soft-white);
-}
-
-
-/* =========================================
-   PAGE FOOTER
-========================================= */
-
-.page-footer {
-    position: absolute;
-
-    left: 4rem;
-    right: 4rem;
-    bottom: 3rem;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 1.5rem;
-
-    font-size: 0.6rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.18em;
-
-    color: rgba(255, 255, 255, 0.45);
-
-    text-transform: uppercase;
-}
-
-
-.footer-line {
-    width: 80px;
-
+    width: min(500px, 45vw);
     height: 1px;
 
-    background: var(--kfc-red);
+    margin: 2.5rem 0;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    transform-origin: left;
+
+    animation: dividerIn 1s ease forwards;
 }
 
 
-/* =========================================
-   SUBTLE RED DETAIL
-========================================= */
+/* DESCRIPTION */
+
+.genius-description {
+    max-width: 700px;
+
+    margin-left: 20%;
+
+    opacity: 0;
+
+    animation: descriptionIn 0.9s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.genius-description p {
+    color: var(--muted-white);
+
+    font-size: clamp(0.9rem, 1.3vw, 1.15rem);
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+
+/* PAGE 02 BACKGROUND */
 
 .genius-page::before {
+    content: "02";
+
+    position: absolute;
+
+    right: -1rem;
+    bottom: -4rem;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: 25rem;
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+.genius-page::after {
     content: "";
 
     position: absolute;
 
-    width: 35vw;
-    height: 35vw;
+    width: 45vw;
+    height: 45vw;
 
-    right: -12vw;
-    top: -15vw;
+    left: -25vw;
+    top: 15vh;
 
-    border: 1px solid rgba(228, 0, 43, 0.25);
-
+    border: 1px solid rgba(228, 0, 43, 0.12);
     border-radius: 50%;
 
     pointer-events: none;
 }
 
 
-/* =========================================
-   PAGE 02 TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-    .genius-page {
-        padding: 2rem;
-    }
-
-
-    .genius-top {
-        top: 2rem;
-
-        left: 2rem;
-        right: 2rem;
-    }
-
-
-    .genius-name {
-        font-size: clamp(4rem, 13vw, 9rem);
-    }
-
-
-    .page-footer {
-        left: 2rem;
-        right: 2rem;
-
-        bottom: 2rem;
-    }
-}
-
-
-/* =========================================
-   PAGE 02 MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .genius-page {
-        min-height: 100svh;
-
-        padding: 1.5rem;
-    }
-
-
-    .genius-top {
-        top: 1.5rem;
-
-        left: 1.5rem;
-        right: 1.5rem;
-    }
-
-
-    .page-label {
-        font-size: 0.6rem;
-    }
-
-
-    .genius-name {
-        font-size: clamp(4rem, 18vw, 7rem);
-
-        line-height: 0.86;
-    }
-
-
-    .genius-divider {
-        margin-top: 2rem;
-    }
-
-
-    .genius-description {
-        margin-top: 2rem;
-    }
-
-
-    .genius-description p {
-        font-size: 1rem;
-    }
-
-
-    .page-footer {
-        left: 1.5rem;
-        right: 1.5rem;
-
-        bottom: 1.5rem;
-
-        gap: 0.8rem;
-    }
-
-
-    .footer-line {
-        width: 40px;
-    }
-}
-
-
-/* =========================================
-   PAGE NAVIGATION
-========================================= */
-
-.page-footer {
-    position: absolute;
-
-    left: 4rem;
-    right: 4rem;
-    bottom: 3rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    font-size: 0.6rem;
-    font-weight: 700;
-
-    letter-spacing: 0.18em;
-
-    text-transform: uppercase;
-
-    z-index: 20;
-}
-
-
-.page-progress {
-    display: flex;
-    align-items: center;
-
-    gap: 1.5rem;
-
-    color: rgba(255, 255, 255, 0.45);
-}
-
-
-.page-nav {
-    color: var(--white);
-
-    text-decoration: none;
-
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-.page-nav:hover {
-    color: var(--kfc-red);
-}
-
-
-.previous:hover {
-    transform: translateX(-5px);
-}
-
-
-.next:hover {
-    transform: translateX(5px);
-}
-
-
-
-
-/* =========================================
+/* =========================================================
    PAGE 03 — WHO ARE BOYZnBUCK$?
-========================================= */
+========================================================= */
 
 .boyz-page {
     position: relative;
@@ -950,9 +476,9 @@ body {
 }
 
 
-/* =========================================
+/* =========================================================
    PAGE 03 TOP BAR
-========================================= */
+========================================================= */
 
 .boyz-top {
     position: absolute;
@@ -965,13 +491,24 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    z-index: 10;
+    z-index: 20;
+}
+
+.boyz-top .page-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.boyz-top .page-number {
+    color: var(--faint-white);
 }
 
 
-/* =========================================
-   MAIN CONTENT
-========================================= */
+/* =========================================================
+   PAGE 03 MAIN CONTENT
+========================================================= */
 
 .boyz-content {
     position: relative;
@@ -981,190 +518,357 @@ body {
 
     margin: 0 auto;
 
-    padding-top: 12vh;
+    padding-top: 13vh;
 
-    z-index: 2;
+    z-index: 5;
 }
 
 
-/* =========================================
-   INTRO LABEL
-========================================= */
+/* =========================================================
+   PAGE 03 HERO
+========================================================= */
 
-.boyz-page .intro-label {
-    margin-bottom: 1rem;
+.boyz-hero {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   THE COLLECTIVE
+========================================================= */
+
+.boyz-hero .intro-label {
+    display: block;
+
+    margin-bottom: 1.8rem;
 
     color: var(--kfc-red);
 
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 800;
-
-    letter-spacing: 0.3em;
+    letter-spacing: 0.32em;
+    line-height: 1;
 
     text-transform: uppercase;
+
+    opacity: 0;
+
+    animation: collectiveIn 0.7s ease forwards;
+    animation-delay: 0.1s;
 }
 
 
-/* =========================================
-   MAIN HEADING
-========================================= */
+/* =========================================================
+   BOYZnBUCK$ MAIN HEADING
+========================================================= */
 
 .boyz-heading {
+    display: block;
+
     margin: 0;
 
     font-family: "Anton", Impact, sans-serif;
 
-    font-size: clamp(6rem, 15vw, 15rem);
-
-    line-height: 0.78;
-
+    font-size: clamp(5.5rem, 13vw, 14rem);
     font-weight: 400;
 
-    letter-spacing: -0.04em;
+    line-height: 0.76;
+
+    letter-spacing: -0.045em;
 
     text-transform: uppercase;
-}
 
+    color: var(--white);
+
+    opacity: 0;
+
+    animation: headingIn 0.95s ease forwards;
+    animation-delay: 0.3s;
+}
 
 .boyz-heading span {
     color: var(--kfc-red);
 }
 
 
-/* =========================================
+/* =========================================================
    INTRO STATEMENT
-========================================= */
+========================================================= */
 
-.boyz-intro {
+.intro-statement {
     max-width: 700px;
 
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 
-    padding-left: 1rem;
-
-    border-left: 3px solid var(--kfc-red);
-}
-
-
-.boyz-intro .intro-statement {
     font-family: "Anton", Impact, sans-serif;
 
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(1.8rem, 3.2vw, 3.6rem);
 
-    line-height: 0.95;
+    line-height: 0.9;
 
     letter-spacing: -0.02em;
 
     text-transform: uppercase;
+
+    color: var(--white);
+
+    opacity: 0;
+
+    animation: statementIn 0.8s ease forwards;
+    animation-delay: 0.6s;
 }
 
 
-/* =========================================
-   INFORMATION GRID
-========================================= */
+/* =========================================================
+   ARTIST LIST
+========================================================= */
 
-.boyz-info {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 3rem;
-
-    margin-top: 7rem;
-}
-
-
-/* =========================================
-   INFORMATION BLOCK
-========================================= */
-
-.info-block {
+.boyz-members {
     position: relative;
 
-    padding-top: 1.5rem;
+    width: 100%;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 0.55rem 1.1rem;
+
+    margin-top: 4rem;
+    padding: 1.3rem 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    z-index: 10;
+
+    opacity: 0;
+
+    animation: membersIn 0.8s ease forwards;
+    animation-delay: 0.8s;
 }
 
 
-.info-number {
+/* MEMBERS */
+
+.boyz-members span {
+    display: inline-block;
+
+    color: var(--white);
+
+    font-size: clamp(0.62rem, 0.85vw, 0.85rem);
+
+    font-weight: 800;
+
+    letter-spacing: 0.07em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* RED MEMBERS */
+
+.boyz-members .red-name {
+    color: var(--kfc-red);
+}
+
+
+/* HOVER */
+
+.boyz-members span:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   PAGE 03 STORY
+========================================================= */
+
+.boyz-story {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 53rem;
+
+    margin-top: 3.5rem;
+
+    padding-bottom: 5rem;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   STORY BLOCK
+========================================================= */
+
+.story-block {
+    position: absolute;
+
+    width: 27%;
+
+    padding-top: 1.1rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    z-index: 5;
+
+    opacity: 0;
+}
+
+
+/* =========================================================
+   01 — WHAT THEY DID
+   TOP LEFT
+========================================================= */
+
+.story-left {
+    left: 0;
+    top: 0;
+
+    animation: storyLeftIn 0.8s ease forwards;
+    animation-delay: 1s;
+}
+
+
+/* =========================================================
+   02 — WHY THEY MATTER
+   MIDDLE + UNDERNEATH
+========================================================= */
+
+.story-center {
+    left: 36%;
+    top: 13rem;
+
+    animation: storyCenterIn 0.8s ease forwards;
+    animation-delay: 1.15s;
+}
+
+
+/* =========================================================
+   03 — WHY THEY FIT KFC
+   BOTTOM RIGHT
+========================================================= */
+
+.story-right {
+    right: 0;
+    top: 27rem;
+
+    animation: storyRightIn 0.8s ease forwards;
+    animation-delay: 1.3s;
+}
+
+
+/* =========================================================
+   STORY NUMBER
+========================================================= */
+
+.story-block .info-number {
     display: block;
 
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
 
     color: var(--kfc-red);
 
-    font-size: 0.7rem;
-
+    font-size: 0.65rem;
     font-weight: 800;
 
     letter-spacing: 0.2em;
 }
 
 
-.info-block h2 {
-    margin-bottom: 1.5rem;
+/* =========================================================
+   STORY HEADINGS
+========================================================= */
+
+.story-block h2 {
+    margin-bottom: 1.3rem;
 
     font-family: "Anton", Impact, sans-serif;
 
-    font-size: clamp(2rem, 3vw, 3.5rem);
-
-    line-height: 0.9;
+    font-size: clamp(2.5rem, 4vw, 4.8rem);
 
     font-weight: 400;
 
-    letter-spacing: -0.02em;
+    line-height: 0.82;
+
+    letter-spacing: -0.025em;
 
     text-transform: uppercase;
+
+    color: var(--white);
 }
 
 
-.info-block h2 span {
+/* RED WORD */
+
+.story-block h2 span {
     color: var(--kfc-red);
 }
 
 
-.info-block p {
+/* =========================================================
+   STORY PARAGRAPHS
+========================================================= */
+
+.story-block p {
+    max-width: 420px;
+
     margin-bottom: 1rem;
 
-    max-width: 400px;
+    color: var(--muted-white);
 
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.88rem;
 
-    font-size: 0.95rem;
-
-    line-height: 1.6;
+    line-height: 1.55;
 
     font-weight: 500;
 }
 
 
-/* =========================================
-   CLOSING STATEMENT
-========================================= */
+/* =========================================================
+   STREETWISE STATEMENT
+========================================================= */
 
-.info-block strong {
+.story-right strong {
     display: block;
 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
-    color: var(--kfc-red);
+    max-width: 280px;
 
     font-family: "Anton", Impact, sans-serif;
 
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-
-    line-height: 0.95;
+    font-size: clamp(1.8rem, 3vw, 3.5rem);
 
     font-weight: 400;
 
-    letter-spacing: -0.01em;
+    line-height: 0.82;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+
+    color: var(--kfc-red);
 }
 
 
-/* =========================================
-   PAGE 03 BACKGROUND DETAIL
-========================================= */
+/* =========================================================
+   PAGE 03 BACKGROUND CIRCLE
+========================================================= */
 
 .boyz-page::before {
     content: "";
@@ -1175,7 +879,7 @@ body {
     height: 55vw;
 
     right: -25vw;
-    top: 10vh;
+    top: 8vh;
 
     border: 1px solid rgba(228, 0, 43, 0.15);
 
@@ -1185,13 +889,17 @@ body {
 }
 
 
+/* =========================================================
+   GIANT PAGE NUMBER
+========================================================= */
+
 .boyz-page::after {
     content: "03";
 
     position: absolute;
 
     right: 3rem;
-    bottom: 5rem;
+    bottom: 4rem;
 
     font-family: "Anton", Impact, sans-serif;
 
@@ -1202,135 +910,1057 @@ body {
     color: rgba(255, 255, 255, 0.025);
 
     pointer-events: none;
+
+    z-index: 1;
 }
 
 
-/* =========================================
-   PAGE 03 TABLET
-========================================= */
+/* =========================================================
+   PAGE NAVIGATION
+========================================================= */
+
+.page-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 50;
+}
+
+
+.page-progress {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.footer-line {
+    width: 80px;
+    height: 1px;
+
+    background: var(--kfc-red);
+}
+
+
+.page-nav {
+    display: inline-block;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.page-nav:hover {
+    color: var(--kfc-red);
+}
+
+.page-nav.previous:hover {
+    transform: translateX(-5px);
+}
+
+.page-nav.next:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes headingIn {
+    from {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes statementIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes membersIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes storyLeftIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes storyCenterIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes storyRightIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes collectiveIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes page2LabelIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes page2NameIn {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes dividerIn {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes descriptionIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes arrowBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1000px) {
 
+    /* GENERAL */
+
+    .cover,
+    .genius-page,
     .boyz-page {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
 
+    /* PAGE 01 */
+
+    .main-title {
+        font-size: clamp(5rem, 14vw, 10rem);
+    }
+
+
+    /* PAGE 02 */
+
+    .genius-top {
+        left: 2rem;
+        right: 2rem;
+    }
+
+    .genius-content {
+        min-height: calc(100vh - 10rem);
+    }
+
+    .genius-name {
+        font-size: clamp(5rem, 13vw, 10rem);
+    }
+
+    .genius-description {
+        margin-left: 10%;
+    }
+
+
+    /* PAGE 03 */
+
     .boyz-top {
         left: 2rem;
         right: 2rem;
     }
 
-
     .boyz-content {
-        padding-top: 10vh;
+        padding-top: 11vh;
     }
-
 
     .boyz-heading {
         font-size: clamp(5rem, 14vw, 10rem);
     }
 
-
-    .boyz-info {
-        grid-template-columns: 1fr;
-
-        gap: 4rem;
-
-        margin-top: 5rem;
+    .boyz-members {
+        margin-top: 3rem;
     }
 
 
-    .info-block p {
-        max-width: 650px;
+    /*
+       TABLET STORY:
+       Keep the S-shaped movement,
+       but prevent overlap.
+    */
+
+    .boyz-story {
+        min-height: 55rem;
+    }
+
+    .story-block {
+        width: 40%;
+    }
+
+    .story-left {
+        left: 0;
+        top: 0;
+    }
+
+    .story-center {
+        left: 30%;
+        top: 16rem;
+    }
+
+    .story-right {
+        right: 0;
+        top: 32rem;
     }
 
 
     .boyz-page::after {
         right: 1rem;
-
         font-size: 12rem;
     }
 }
 
 
-/* =========================================
-   PAGE 03 MOBILE
-========================================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
 
+    /* GENERAL */
+
+    .cover,
+    .genius-page,
     .boyz-page {
         min-height: 100svh;
 
-        padding: 1.5rem 1.5rem 7rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
 
-    .boyz-top {
-        top: 1.5rem;
+    /* PAGE 01 */
 
+    .cover {
+        padding-top: 1.5rem;
+        padding-bottom: 6rem;
+    }
+
+    .cover-top {
+        padding-top: 0;
+    }
+
+    .brand-label {
+        font-size: 0.6rem;
+    }
+
+    .cover .page-number {
+        font-size: 0.55rem;
+    }
+
+    .cover-content {
+        padding-top: 12vh;
+        padding-bottom: 8vh;
+    }
+
+    .brief {
+        font-size: 0.6rem;
+    }
+
+    .main-title {
+        font-size: clamp(4.3rem, 20vw, 7rem);
+        line-height: 0.8;
+    }
+
+    .title-line {
+        width: 70%;
+        margin-top: 1.8rem;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 2rem;
+
+        margin-top: 4rem;
+    }
+
+    .theme {
+        font-size: 2.8rem;
+        text-align: left;
+    }
+
+    .scroll-indicator {
+        bottom: 1.5rem;
+    }
+
+    .scroll-indicator span:first-child {
+        font-size: 0.5rem;
+    }
+
+    .cover::after {
+        right: 0;
+        bottom: 0;
+        font-size: 8rem;
+    }
+
+
+    /* PAGE 02 */
+
+    .genius-page {
+        padding-top: 1.5rem;
+        padding-bottom: 7rem;
+    }
+
+    .genius-top {
+        top: 1.5rem;
         left: 1.5rem;
         right: 1.5rem;
     }
 
+    .genius-top .page-label {
+        font-size: 0.6rem;
+    }
+
+    .genius-top .page-number {
+        font-size: 0.55rem;
+    }
+
+    .genius-content {
+        min-height: calc(100svh - 7rem);
+
+        padding-top: 10vh;
+    }
+
+    .genius-content .intro-label {
+        font-size: 0.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .genius-name {
+        font-size: clamp(4rem, 19vw, 7rem);
+        line-height: 0.8;
+    }
+
+    .genius-divider {
+        width: 70%;
+        margin: 2rem 0;
+    }
+
+    .genius-description {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .genius-description p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .genius-page::before {
+        right: -1rem;
+        bottom: -1rem;
+        font-size: 10rem;
+    }
+
+
+    /* PAGE 03 */
+
+    .boyz-page {
+        padding-top: 1.5rem;
+        padding-bottom: 7rem;
+    }
+
+    .boyz-top {
+        top: 1.5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .boyz-top .page-label {
+        font-size: 0.6rem;
+    }
+
+    .boyz-top .page-number {
+        font-size: 0.55rem;
+    }
+
+
+    /* HERO */
 
     .boyz-content {
         padding-top: 18vh;
     }
 
+    .boyz-hero .intro-label {
+        margin-bottom: 1.5rem;
 
-    .boyz-page .intro-label {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.25em;
     }
-
 
     .boyz-heading {
         font-size: clamp(4rem, 20vw, 7rem);
+        line-height: 0.8;
+    }
 
-        line-height: 0.82;
+    .intro-statement {
+        margin-top: 1.8rem;
+
+        font-size: clamp(1.7rem, 8vw, 2.8rem);
     }
 
 
-    .boyz-intro {
-        margin-top: 2.5rem;
+    /* MEMBERS */
 
-        padding-left: 0.8rem;
+    .boyz-members {
+        margin-top: 3rem;
+
+        gap: 0.5rem 0.7rem;
+
+        padding: 1rem 0;
+    }
+
+    .boyz-members span {
+        font-size: 0.58rem;
     }
 
 
-    .boyz-intro .intro-statement {
-        font-size: clamp(1.8rem, 9vw, 3rem);
+    /* STORY */
+
+    .boyz-story {
+        min-height: auto;
+
+        margin-top: 3rem;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 4rem;
+
+        padding-bottom: 2rem;
+    }
+
+    .story-block,
+    .story-left,
+    .story-center,
+    .story-right {
+        position: relative;
+
+        width: 100%;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        margin: 0;
     }
 
 
-    .boyz-info {
-        margin-top: 4rem;
+    /*
+       Keep the S movement on mobile.
+    */
 
-        gap: 3rem;
+    .story-center {
+        padding-left: 12%;
+    }
+
+    .story-right {
+        padding-left: 24%;
     }
 
 
-    .info-block h2 {
+    /* STORY TYPOGRAPHY */
+
+    .story-block h2 {
+        font-size: 2.8rem;
+    }
+
+    .story-block p {
+        font-size: 0.82rem;
+    }
+
+    .story-right strong {
+        max-width: 240px;
         font-size: 2.5rem;
+
+        margin-top: 1.3rem;
+        padding-bottom: 1rem;
     }
 
 
-    .info-block p {
-        font-size: 0.9rem;
+    /* NAVIGATION */
+
+    .page-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    .page-progress {
+        display: none;
+    }
+
+    .page-nav {
+        font-size: 0.55rem;
     }
 
 
-    .info-block strong {
-        font-size: 1.8rem;
-    }
-
+    /* NUMBER */
 
     .boyz-page::after {
-        font-size: 8rem;
-
         right: 0.5rem;
         bottom: 5rem;
+
+        font-size: 8rem;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+/* =========================================================
+   PAGE 04 — THE CULTURAL TRUTH
+   ========================================================= */
+
+.truth-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 4rem 8rem;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------
+   TOP BAR
+   --------------------------------------------------------- */
+
+.truth-top {
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+}
+
+/* ---------------------------------------------------------
+   BACKGROUND WORD
+   --------------------------------------------------------- */
+
+.truth-bg-word {
+    position: absolute;
+    right: -4vw;
+    bottom: 2vh;
+
+    font-family: "Anton", sans-serif;
+    font-size: clamp(14rem, 32vw, 34rem);
+    line-height: 0.7;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+
+    color: #fff;
+    opacity: 0.035;
+
+    pointer-events: none;
+    user-select: none;
+
+    animation: truthBgIn 1.8s ease forwards;
+}
+
+/* ---------------------------------------------------------
+   CONTENT
+   --------------------------------------------------------- */
+
+.truth-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1450px;
+    min-height: 78vh;
+
+    margin: 0 auto;
+    padding-top: 18vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ---------------------------------------------------------
+   LABEL
+   --------------------------------------------------------- */
+
+.truth-label {
+    color: #e4002b;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: truthLabelIn 0.8s ease forwards;
+    animation-delay: 0.1s;
+}
+
+/* ---------------------------------------------------------
+   MAIN HEADING
+   --------------------------------------------------------- */
+
+.truth-heading {
+    margin: 0;
+
+    font-family: "Anton", sans-serif;
+    font-size: clamp(6rem, 14vw, 14rem);
+    font-weight: 400;
+
+    line-height: 0.76;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+
+    color: #fff;
+
+    opacity: 0;
+    transform: translateY(60px);
+
+    animation: truthHeadingIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.25s;
+}
+
+.truth-heading span {
+    display: block;
+    color: #e4002b;
+}
+
+/* ---------------------------------------------------------
+   DIVIDER
+   --------------------------------------------------------- */
+
+.truth-divider {
+    width: 90px;
+    height: 4px;
+
+    margin-top: 3rem;
+
+    background: #e4002b;
+
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+
+    animation: truthDividerIn 0.8s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* ---------------------------------------------------------
+   STATEMENT
+   --------------------------------------------------------- */
+
+.truth-statement {
+    max-width: 850px;
+
+    margin-top: 3rem;
+
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.3rem, 2.2vw, 2.4rem);
+    font-weight: 500;
+
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    animation: truthStatementIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.truth-statement p {
+    margin: 0;
+}
+
+.truth-statement p + p {
+    margin-top: 1.2rem;
+}
+
+/* ---------------------------------------------------------
+   HIGHLIGHTED STATEMENT
+   --------------------------------------------------------- */
+
+.truth-highlight {
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
+    line-height: 0.95;
+
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+
+    color: #fff;
+}
+
+.truth-highlight::first-line {
+    color: #e4002b;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+.truth-page .page-footer {
+    position: absolute;
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+}
+
+/* ---------------------------------------------------------
+   ANIMATIONS
+   --------------------------------------------------------- */
+
+@keyframes truthLabelIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes truthHeadingIn {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes truthDividerIn {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes truthStatementIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes truthBgIn {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 0.035;
+        transform: translateX(0);
+    }
+}
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .truth-page {
+        padding: 2rem 2rem 7rem;
+    }
+
+    .truth-top {
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+    }
+
+    .truth-content {
+        padding-top: 17vh;
+    }
+
+    .truth-heading {
+        font-size: clamp(5rem, 15vw, 10rem);
+    }
+
+    .truth-statement {
+        max-width: 700px;
+    }
+
+    .truth-page .page-footer {
+        left: 2rem;
+        right: 2rem;
+        bottom: 2rem;
+    }
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .truth-page {
+        min-height: 100svh;
+        padding: 1.5rem 1.5rem 7rem;
+    }
+
+    .truth-top {
+        top: 1.5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .truth-content {
+        min-height: auto;
+        padding-top: 18vh;
+    }
+
+    .truth-heading {
+        font-size: clamp(4.5rem, 20vw, 7rem);
+        line-height: 0.78;
+    }
+
+    .truth-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.22em;
+    }
+
+    .truth-divider {
+        width: 60px;
+        height: 3px;
+        margin-top: 2rem;
+    }
+
+    .truth-statement {
+        margin-top: 2rem;
+
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    .truth-highlight {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        line-height: 0.95;
+    }
+
+    .truth-bg-word {
+        right: -8vw;
+        bottom: 12vh;
+
+        font-size: 45vw;
+    }
+
+    .truth-page .page-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    .truth-page .page-progress {
+        display: none;
+    }
+}
+
+/* ---------------------------------------------------------
+   REDUCED MOTION
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .truth-label,
+    .truth-heading,
+    .truth-divider,
+    .truth-statement,
+    .truth-bg-word {
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 }
