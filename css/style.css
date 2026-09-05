@@ -309,27 +309,22 @@ body {
 
 .scroll-indicator {
     position: absolute;
-
-    left: 4rem;
-    bottom: 3rem;
-
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-
+    flex-direction: column;
     align-items: center;
-
-    gap: 1rem;
-
-    font-size: 0.6rem;
-
-    font-weight: 600;
-
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.65rem;
+    font-weight: 700;
     letter-spacing: 0.2em;
-
-    color: rgba(255, 255, 255, 0.5);
-
-    z-index: 10;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 20;
 }
-
 
 .scroll-arrow {
     color: var(--kfc-red);
@@ -546,4 +541,389 @@ body {
     .scroll-indicator {
         display: none;
     }
+}
+
+
+
+/* =========================================
+   PAGE 02 — GENIUS NALEDI MATHEBULA
+========================================= */
+
+
+/* =========================================
+   PAGE 02 BASE
+========================================= */
+
+.genius-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 3rem 4rem;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PAGE 02 TOP BAR
+========================================= */
+
+.genius-top {
+    position: absolute;
+
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+
+.page-label {
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   PAGE 02 CONTENT
+========================================= */
+
+.genius-content {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   INTRO LABEL
+========================================= */
+
+.intro-label {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3em;
+
+    color: var(--kfc-red);
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   GENIUS NAME
+========================================= */
+
+.genius-name {
+    max-width: 1200px;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(5rem, 12vw, 12rem);
+
+    line-height: 0.82;
+
+    font-weight: 400;
+
+    letter-spacing: -0.035em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NAME ACCENT
+========================================= */
+
+.genius-name span {
+    color: var(--kfc-red);
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.genius-divider {
+    width: 100%;
+
+    height: 2px;
+
+    margin-top: 3rem;
+
+    background: var(--kfc-red);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.genius-description {
+    max-width: 650px;
+
+    margin-top: 3rem;
+}
+
+
+.genius-description p {
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
+
+    line-height: 1.5;
+
+    font-weight: 500;
+
+    letter-spacing: -0.01em;
+
+    color: var(--soft-white);
+}
+
+
+/* =========================================
+   PAGE FOOTER
+========================================= */
+
+.page-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    text-transform: uppercase;
+}
+
+
+.footer-line {
+    width: 80px;
+
+    height: 1px;
+
+    background: var(--kfc-red);
+}
+
+
+/* =========================================
+   SUBTLE RED DETAIL
+========================================= */
+
+.genius-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 35vw;
+    height: 35vw;
+
+    right: -12vw;
+    top: -15vw;
+
+    border: 1px solid rgba(228, 0, 43, 0.25);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   PAGE 02 TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .genius-page {
+        padding: 2rem;
+    }
+
+
+    .genius-top {
+        top: 2rem;
+
+        left: 2rem;
+        right: 2rem;
+    }
+
+
+    .genius-name {
+        font-size: clamp(4rem, 13vw, 9rem);
+    }
+
+
+    .page-footer {
+        left: 2rem;
+        right: 2rem;
+
+        bottom: 2rem;
+    }
+}
+
+
+/* =========================================
+   PAGE 02 MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .genius-page {
+        min-height: 100svh;
+
+        padding: 1.5rem;
+    }
+
+
+    .genius-top {
+        top: 1.5rem;
+
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+
+    .page-label {
+        font-size: 0.6rem;
+    }
+
+
+    .genius-name {
+        font-size: clamp(4rem, 18vw, 7rem);
+
+        line-height: 0.86;
+    }
+
+
+    .genius-divider {
+        margin-top: 2rem;
+    }
+
+
+    .genius-description {
+        margin-top: 2rem;
+    }
+
+
+    .genius-description p {
+        font-size: 1rem;
+    }
+
+
+    .page-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+
+        bottom: 1.5rem;
+
+        gap: 0.8rem;
+    }
+
+
+    .footer-line {
+        width: 40px;
+    }
+}
+
+
+/* =========================================
+   PAGE NAVIGATION
+========================================= */
+
+.page-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    z-index: 20;
+}
+
+
+.page-progress {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+.page-nav {
+    color: var(--white);
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.page-nav:hover {
+    color: var(--kfc-red);
+}
+
+
+.previous:hover {
+    transform: translateX(-5px);
+}
+
+
+.next:hover {
+    transform: translateX(5px);
 }
