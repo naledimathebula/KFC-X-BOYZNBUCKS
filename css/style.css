@@ -2573,3 +2573,752 @@ a {
     */
 
 }
+
+
+/* =========================================================
+   KFC × BOYZNBUCK$
+   PAGE 10 — THE FINAL STATEMENT
+   FINAL / HERO PAGE
+   ========================================================= */
+
+/* =========================================================
+   PAGE WRAPPER
+   ========================================================= */
+
+.final-statement-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 3rem 4rem 8rem;
+
+    background: #000000;
+    color: #ffffff;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.final-statement-top {
+    position: absolute;
+
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+.final-kicker {
+    color: #e4002b;
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+.final-page-number {
+    color: rgba(255, 255, 255, 0.45);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   BACKGROUND WORD
+   ========================================================= */
+
+.final-bg-word {
+    position: absolute;
+
+    right: -8vw;
+    bottom: -5vh;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(15rem, 32vw, 35rem);
+
+    line-height: 0.72;
+
+    letter-spacing: -0.06em;
+
+    color: #ffffff;
+
+    opacity: 0.025;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   RED ACCENT CIRCLE
+   ========================================================= */
+
+.final-accent {
+    position: absolute;
+
+    width: 55vw;
+    height: 55vw;
+
+    right: -30vw;
+    top: 10vh;
+
+    border: 1px solid rgba(228, 0, 43, 0.18);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: finalCircleIn 1.8s ease forwards;
+}
+
+
+/* =========================================================
+   MAIN HERO
+   ========================================================= */
+
+.final-statement-hero {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: calc(100vh - 11rem);
+
+    margin: 0 auto;
+
+    padding-top: 15vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.final-label {
+    margin-bottom: 1.6rem;
+
+    color: #e4002b;
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.3em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    animation: finalLabelIn 0.8s ease forwards;
+    animation-delay: 0.1s;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.final-main-heading {
+    max-width: 1250px;
+
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(5rem, 11vw, 12rem);
+
+    font-weight: 400;
+
+    line-height: 0.76;
+
+    letter-spacing: -0.045em;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    animation: finalHeadingIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+    animation-delay: 0.25s;
+}
+
+
+/* RED LINE IN HEADING */
+
+.final-main-heading span {
+    display: block;
+
+    color: #e4002b;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.final-divider {
+    width: 110px;
+    height: 4px;
+
+    margin-top: 3rem;
+
+    background: #e4002b;
+
+    transform-origin: left;
+
+    transform: scaleX(0);
+
+    opacity: 0;
+
+    animation: finalDividerIn 0.8s ease forwards;
+
+    animation-delay: 0.75s;
+}
+
+
+/* =========================================================
+   COPY
+   ========================================================= */
+
+.final-statement-copy {
+    max-width: 820px;
+
+    margin-top: 2.5rem;
+
+    margin-left: 18%;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: clamp(0.95rem, 1.35vw, 1.2rem);
+
+    font-weight: 500;
+
+    line-height: 1.65;
+
+    letter-spacing: 0.005em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    animation: finalCopyIn 0.9s ease forwards;
+
+    animation-delay: 0.95s;
+}
+
+
+/* STRONG BOYZnBUCK$ */
+
+.final-statement-copy strong {
+    color: #ffffff;
+
+    font-weight: 800;
+}
+
+
+/* RED EMPHASIS */
+
+.final-statement-copy .red {
+    color: #e4002b;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CREDIT
+   ========================================================= */
+
+.final-credit {
+    margin-top: 2.8rem;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    animation: finalCreditIn 0.8s ease forwards;
+
+    animation-delay: 1.2s;
+}
+
+.final-credit span {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FINAL RED LINE
+   ========================================================= */
+
+.final-red-line {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+
+    bottom: 5.8rem;
+
+    height: 1px;
+
+    background: rgba(228, 0, 43, 0.6);
+
+    transform-origin: left;
+
+    transform: scaleX(0);
+
+    animation: finalLineIn 1s ease forwards;
+
+    animation-delay: 1.3s;
+
+    z-index: 8;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.final-statement-page .page-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+
+    bottom: 2.8rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   FOOTER NAV
+   ========================================================= */
+
+.final-statement-page .page-nav {
+    color: #ffffff;
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.final-statement-page .page-nav:hover {
+    color: #e4002b;
+}
+
+.final-statement-page .page-nav:first-child:hover {
+    transform: translateX(-5px);
+}
+
+.final-statement-page .page-nav:last-child:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PAGE PROGRESS
+   ========================================================= */
+
+.final-statement-page .page-progress {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.45rem;
+}
+
+.final-statement-page .page-progress span {
+    display: block;
+
+    width: 18px;
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.final-statement-page .page-progress span.active {
+    width: 38px;
+
+    background: #e4002b;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes finalLabelIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes finalHeadingIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes finalDividerIn {
+
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+}
+
+
+@keyframes finalCopyIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes finalCreditIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes finalLineIn {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+@keyframes finalCircleIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .final-statement-page {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .final-statement-top {
+        left: 2rem;
+        right: 2rem;
+    }
+
+    .final-statement-hero {
+        padding-top: 14vh;
+    }
+
+    .final-main-heading {
+        font-size: clamp(5rem, 13vw, 10rem);
+    }
+
+    .final-statement-copy {
+        margin-left: 8%;
+        max-width: 700px;
+    }
+
+    .final-red-line {
+        left: 2rem;
+        right: 2rem;
+    }
+
+    .final-statement-page .page-footer {
+        left: 2rem;
+        right: 2rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .final-statement-page {
+        min-height: 100svh;
+
+        padding: 1.5rem 1.5rem 7rem;
+
+        overflow-y: auto;
+    }
+
+
+    /* TOP */
+
+    .final-statement-top {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        margin-bottom: 5rem;
+    }
+
+    .final-kicker {
+        font-size: 0.6rem;
+    }
+
+    .final-page-number {
+        font-size: 0.55rem;
+    }
+
+
+    /* HERO */
+
+    .final-statement-hero {
+        min-height: auto;
+
+        padding-top: 0;
+
+        justify-content: flex-start;
+    }
+
+    .final-label {
+        font-size: 0.6rem;
+
+        letter-spacing: 0.22em;
+
+        margin-bottom: 1.2rem;
+    }
+
+    .final-main-heading {
+        font-size: clamp(4rem, 18vw, 7rem);
+
+        line-height: 0.8;
+    }
+
+    .final-divider {
+        width: 65px;
+
+        height: 3px;
+
+        margin-top: 2rem;
+    }
+
+    .final-statement-copy {
+        margin-left: 0;
+
+        margin-top: 2rem;
+
+        max-width: 100%;
+
+        font-size: 0.78rem;
+
+        line-height: 1.6;
+    }
+
+    .final-credit {
+        margin-top: 2rem;
+
+        font-size: 0.52rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* BACKGROUND */
+
+    .final-bg-word {
+        right: -12vw;
+
+        bottom: 10vh;
+
+        font-size: 42vw;
+    }
+
+    .final-accent {
+        width: 85vw;
+        height: 85vw;
+
+        right: -50vw;
+
+        top: 35vh;
+    }
+
+
+    /* LINE */
+
+    .final-red-line {
+        left: 1.5rem;
+        right: 1.5rem;
+
+        bottom: 5.2rem;
+    }
+
+
+    /* FOOTER */
+
+    .final-statement-page .page-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+
+        bottom: 1.5rem;
+    }
+
+    .final-statement-page .page-progress {
+        display: none;
+    }
+
+    .final-statement-page .page-nav {
+        font-size: 0.55rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .final-label,
+    .final-main-heading,
+    .final-divider,
+    .final-statement-copy,
+    .final-credit,
+    .final-red-line,
+    .final-accent {
+        animation: none;
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+}

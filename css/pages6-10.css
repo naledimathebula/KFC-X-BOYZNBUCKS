@@ -2503,3 +2503,764 @@
     }
 
 }
+
+
+/* =========================================================
+   PAGE 10 — THE FINAL STATEMENT
+   KFC X BOYZNBUCK$
+   ========================================================= */
+
+.final-statement-page {
+    --black: #000000;
+    --white: #ffffff;
+    --red: #e4002b;
+    --muted: rgba(255, 255, 255, 0.68);
+    --faint: rgba(255, 255, 255, 0.08);
+
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    background: var(--black);
+    color: var(--white);
+
+    font-family: "Inter", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   GIANT BACKGROUND WORD
+   ========================================================= */
+
+.final-bg-word {
+    position: absolute;
+
+    left: -2%;
+    bottom: 5%;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(10rem, 25vw, 32rem);
+    line-height: 0.75;
+
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.07);
+
+    white-space: nowrap;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   GIANT PAGE NUMBER
+   ========================================================= */
+
+.final-statement-page::before {
+    content: "10";
+
+    position: absolute;
+
+    top: 9rem;
+    right: 4rem;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(8rem, 18vw, 18rem);
+    line-height: 0.8;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   RED CIRCLE
+   ========================================================= */
+
+.final-accent {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: 2px solid rgba(228, 0, 43, 0.8);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 35px rgba(228, 0, 43, 0.025),
+        0 0 0 70px rgba(228, 0, 43, 0.018);
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* Inner circle */
+
+.final-accent::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 35px;
+
+    border: 1px solid rgba(228, 0, 43, 0.35);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.final-statement-top {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 1.25rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    z-index: 5;
+}
+
+
+/* Left label */
+
+.final-kicker {
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--red);
+}
+
+
+/* Page number */
+
+.final-page-number {
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   MAIN HERO
+   ========================================================= */
+
+.final-statement-hero {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    max-width: 1250px;
+
+    padding: 4rem 0 7rem;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.final-label {
+    margin-bottom: 1.5rem;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.final-main-heading {
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(4.5rem, 9vw, 10rem);
+
+    font-weight: 400;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+
+    color: var(--white);
+
+    max-width: 1150px;
+}
+
+
+/* Red second line */
+
+.final-main-heading span {
+    display: block;
+
+    color: var(--red);
+
+    font-size: 1.12em;
+
+    margin-top: 0.05em;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.final-divider {
+    width: 150px;
+    height: 5px;
+
+    background: var(--red);
+
+    margin: 2.5rem 0 2rem;
+
+    position: relative;
+}
+
+
+/* Small white extension */
+
+.final-divider::after {
+    content: "";
+
+    position: absolute;
+
+    left: 160px;
+    top: 0;
+
+    width: 45px;
+    height: 5px;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   COPY
+   ========================================================= */
+
+.final-statement-copy {
+    max-width: 850px;
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+
+    font-weight: 500;
+
+    line-height: 1.65;
+
+    letter-spacing: 0.01em;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+
+/* Bold BOYZNBUCK$ */
+
+.final-statement-copy strong {
+    color: var(--white);
+
+    font-weight: 900;
+}
+
+
+/* Red highlight */
+
+.final-statement-copy .red {
+    color: var(--red);
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   CREDIT
+   ========================================================= */
+
+.final-credit {
+    margin-top: 2.5rem;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+.final-credit span {
+    color: var(--white);
+
+    margin-left: 0.35rem;
+}
+
+
+/* =========================================================
+   FINAL RED LINE
+   ========================================================= */
+
+.final-red-line {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 6.5rem;
+
+    height: 3px;
+
+    background: var(--red);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.final-statement-page .page-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+    bottom: 2rem;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 10;
+
+    margin: 0;
+}
+
+
+/* Navigation */
+
+.final-statement-page .page-nav {
+    color: rgba(255, 255, 255, 0.65);
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.final-statement-page .page-nav:hover {
+    color: var(--red);
+
+    transform: translateX(4px);
+}
+
+
+/* Previous hover goes left */
+
+.final-statement-page .page-nav:first-child:hover {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.final-statement-page .page-progress {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.final-statement-page .page-progress span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    transition:
+        background 0.25s ease,
+        width 0.25s ease;
+}
+
+
+.final-statement-page .page-progress span.active {
+    width: 42px;
+
+    background: var(--red);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+.final-statement-hero {
+    animation: finalHeroReveal 0.9s ease-out both;
+}
+
+
+.final-main-heading {
+    animation: finalHeadingReveal 1s ease-out 0.15s both;
+}
+
+
+.final-divider {
+    animation: finalLineReveal 0.8s ease-out 0.4s both;
+}
+
+
+.final-statement-copy {
+    animation: finalCopyReveal 0.8s ease-out 0.55s both;
+}
+
+
+.final-credit {
+    animation: finalCopyReveal 0.8s ease-out 0.7s both;
+}
+
+
+.final-accent {
+    animation: finalCircleReveal 1.2s ease-out both;
+}
+
+
+@keyframes finalHeroReveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes finalHeadingReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes finalLineReveal {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 150px;
+    }
+}
+
+
+@keyframes finalCopyReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes finalCircleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .final-statement-page {
+        padding: 2.5rem 2.5rem;
+    }
+
+    .final-statement-hero {
+        padding-top: 3rem;
+    }
+
+    .final-main-heading {
+        font-size: clamp(4rem, 10vw, 7rem);
+    }
+
+    .final-accent {
+        width: 300px;
+        height: 300px;
+
+        right: -160px;
+    }
+
+    .final-statement-page .page-footer {
+        left: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .final-red-line {
+        bottom: 6rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .final-statement-page {
+        min-height: 100vh;
+
+        padding: 1.75rem 1.5rem 6rem;
+
+        overflow-y: auto;
+    }
+
+
+    .final-statement-top {
+        padding-bottom: 1rem;
+    }
+
+
+    .final-kicker {
+        font-size: 0.6rem;
+    }
+
+
+    .final-page-number {
+        font-size: 0.6rem;
+    }
+
+
+    .final-statement-hero {
+        padding: 4rem 0 4rem;
+
+        justify-content: center;
+    }
+
+
+    .final-label {
+        font-size: 0.62rem;
+
+        margin-bottom: 1.25rem;
+    }
+
+
+    .final-main-heading {
+        font-size: clamp(3.5rem, 16vw, 6rem);
+
+        line-height: 0.9;
+    }
+
+
+    .final-divider {
+        margin: 2rem 0 1.5rem;
+
+        width: 100px;
+    }
+
+
+    .final-divider::after {
+        left: 110px;
+
+        width: 30px;
+    }
+
+
+    .final-statement-copy {
+        font-size: 0.85rem;
+
+        line-height: 1.6;
+    }
+
+
+    .final-credit {
+        font-size: 0.58rem;
+
+        line-height: 1.6;
+
+        max-width: 280px;
+    }
+
+
+    .final-accent {
+        width: 250px;
+        height: 250px;
+
+        right: -150px;
+        top: 58%;
+    }
+
+
+    .final-bg-word {
+        font-size: 9rem;
+
+        bottom: 14%;
+
+        left: -10%;
+    }
+
+
+    .final-statement-page::before {
+        font-size: 8rem;
+
+        top: 7rem;
+        right: 1rem;
+    }
+
+
+    .final-red-line {
+        bottom: 5rem;
+    }
+
+
+    .final-statement-page .page-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+
+    .final-statement-page .page-nav {
+        font-size: 0.55rem;
+    }
+
+
+    .final-statement-page .page-progress {
+        gap: 4px;
+    }
+
+
+    .final-statement-page .page-progress span {
+        width: 12px;
+    }
+
+
+    .final-statement-page .page-progress span.active {
+        width: 22px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .final-statement-hero,
+    .final-main-heading,
+    .final-divider,
+    .final-statement-copy,
+    .final-credit,
+    .final-accent {
+        animation: none;
+    }
+}
