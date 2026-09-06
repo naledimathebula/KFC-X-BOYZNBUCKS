@@ -1,0 +1,799 @@
+/* =========================================================
+   KFC × BOYZNBUCK$
+   PAGES 06 — 10
+   PAGE 06 — BRAND ROLE
+========================================================= */
+
+
+/* =========================================================
+   PAGE 06 BASE
+========================================================= */
+
+.brand-role-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 3rem 4rem 8rem;
+
+    background: var(--black, #000);
+    color: var(--white, #fff);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.brand-role-top {
+    position: absolute;
+
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+
+.brand-role-top .page-label {
+    color: var(--white, #fff);
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.brand-role-top .page-number {
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.brand-role-hero {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding-top: 16vh;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   KICKER
+========================================================= */
+
+.brand-role-kicker {
+    margin-bottom: 1rem;
+
+    color: var(--kfc-red, #e4002b);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    animation: brandKickerIn 0.7s ease forwards;
+    animation-delay: 0.15s;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.brand-role-heading {
+    max-width: 1100px;
+
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(5.5rem, 11vw, 12rem);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.045em;
+
+    text-transform: uppercase;
+
+    color: var(--white, #fff);
+
+    opacity: 0;
+
+    animation: brandHeadingIn 0.9s ease forwards;
+    animation-delay: 0.3s;
+}
+
+
+.brand-role-heading span {
+    color: var(--kfc-red, #e4002b);
+}
+
+
+/* =========================================================
+   CONTEXT
+========================================================= */
+
+.brand-role-context {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 2.5rem auto 0;
+
+    padding-left: 31%;
+
+    z-index: 6;
+
+    opacity: 0;
+
+    animation: brandContextIn 0.8s ease forwards;
+    animation-delay: 0.75s;
+}
+
+
+.brand-role-context p {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+
+.brand-role-context strong {
+    color: var(--white, #fff);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   BRAND ROLE STRATEGY
+========================================================= */
+
+.brand-role-strategy {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 7rem auto 0;
+
+    padding-top: 1.2rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    z-index: 5;
+
+    opacity: 0;
+
+    animation: brandStrategyIn 0.9s ease forwards;
+    animation-delay: 1s;
+}
+
+
+/* =========================================================
+   STRATEGY LABEL
+========================================================= */
+
+.strategy-label {
+    display: block;
+
+    margin-bottom: 1.2rem;
+
+    color: var(--kfc-red, #e4002b);
+
+    font-size: 0.65rem;
+    font-weight: 800;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   STRATEGY HEADING
+========================================================= */
+
+.brand-role-strategy h2 {
+    max-width: 1050px;
+
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(3.4rem, 6vw, 7rem);
+
+    font-weight: 400;
+
+    line-height: 0.84;
+
+    letter-spacing: -0.03em;
+
+    text-transform: uppercase;
+
+    color: var(--white, #fff);
+}
+
+
+.brand-role-strategy h2 span {
+    color: var(--kfc-red, #e4002b);
+}
+
+
+/* =========================================================
+   STRATEGY SUPPORT LINE
+========================================================= */
+
+.brand-role-strategy > p {
+    margin-top: 1.5rem;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.65rem;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.brand-role-closing {
+    position: absolute;
+
+    right: 4rem;
+    bottom: 8rem;
+
+    width: 270px;
+
+    z-index: 10;
+
+    opacity: 0;
+
+    animation: brandClosingIn 0.8s ease forwards;
+    animation-delay: 1.25s;
+}
+
+
+.closing-line {
+    width: 75px;
+    height: 2px;
+
+    margin-bottom: 1.1rem;
+
+    background: var(--kfc-red, #e4002b);
+}
+
+
+.brand-role-closing p {
+    margin: 0 0 0.35rem;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+
+.brand-role-closing h2 {
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(3rem, 4.5vw, 5rem);
+
+    font-weight: 400;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+
+    color: var(--kfc-red, #e4002b);
+}
+
+
+/* =========================================================
+   BACKGROUND PAGE NUMBER
+========================================================= */
+
+.brand-role-page::before {
+    content: "06";
+
+    position: absolute;
+
+    right: -1rem;
+    bottom: -5rem;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: 24rem;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLE
+========================================================= */
+
+.brand-role-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 55vw;
+    height: 55vw;
+
+    right: -25vw;
+    top: 8vh;
+
+    border: 1px solid rgba(228, 0, 43, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.brand-role-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 30;
+}
+
+
+/* =========================================================
+   FOOTER NAV
+========================================================= */
+
+.brand-role-footer .page-nav {
+    display: inline-block;
+
+    color: var(--white, #fff);
+
+    text-decoration: none;
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.brand-role-footer .page-nav:hover {
+    color: var(--kfc-red, #e4002b);
+}
+
+
+.brand-role-footer .page-nav:first-child:hover {
+    transform: translateX(-5px);
+}
+
+
+.brand-role-footer .page-nav:last-child:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PAGE PROGRESS
+========================================================= */
+
+.brand-role-footer .page-progress {
+    display: flex;
+    align-items: center;
+
+    gap: 0.45rem;
+}
+
+
+.brand-role-footer .page-progress span {
+    display: block;
+
+    width: 16px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+.brand-role-footer .page-progress span.active {
+    width: 34px;
+
+    background: var(--kfc-red, #e4002b);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes brandKickerIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes brandHeadingIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(-65px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes brandContextIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes brandStrategyIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes brandClosingIn {
+
+    from {
+        opacity: 0;
+        transform: translateX(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .brand-role-page {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+
+    .brand-role-top {
+        left: 2rem;
+        right: 2rem;
+    }
+
+
+    .brand-role-hero {
+        padding-top: 17vh;
+    }
+
+
+    .brand-role-heading {
+        font-size: clamp(5rem, 14vw, 10rem);
+    }
+
+
+    .brand-role-context {
+        padding-left: 20%;
+    }
+
+
+    .brand-role-strategy {
+        margin-top: 6rem;
+    }
+
+
+    .brand-role-closing {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        margin: 5rem 0 0 auto;
+
+        width: 300px;
+    }
+
+
+    .brand-role-footer {
+        left: 2rem;
+        right: 2rem;
+    }
+
+
+    .brand-role-page::before {
+        font-size: 15rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .brand-role-page {
+        min-height: 100svh;
+
+        padding: 1.5rem 1.5rem 7rem;
+    }
+
+
+    .brand-role-top {
+        top: 1.5rem;
+
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+
+    .brand-role-top .page-label {
+        font-size: 0.6rem;
+    }
+
+
+    .brand-role-top .page-number {
+        font-size: 0.55rem;
+    }
+
+
+    /* HERO */
+
+    .brand-role-hero {
+        padding-top: 18vh;
+    }
+
+
+    .brand-role-kicker {
+        margin-bottom: 1rem;
+
+        font-size: 0.6rem;
+    }
+
+
+    .brand-role-heading {
+        font-size: clamp(4rem, 19vw, 7rem);
+
+        line-height: 0.8;
+    }
+
+
+    /* CONTEXT */
+
+    .brand-role-context {
+        margin-top: 2.5rem;
+
+        padding-left: 10%;
+    }
+
+
+    .brand-role-context p {
+        font-size: 0.82rem;
+
+        line-height: 1.55;
+    }
+
+
+    /* STRATEGY */
+
+    .brand-role-strategy {
+        margin-top: 5rem;
+    }
+
+
+    .strategy-label {
+        font-size: 0.58rem;
+    }
+
+
+    .brand-role-strategy h2 {
+        font-size: clamp(2.6rem, 11vw, 4.5rem);
+
+        line-height: 0.84;
+    }
+
+
+    .brand-role-strategy > p {
+        font-size: 0.58rem;
+    }
+
+
+    /* CLOSING */
+
+    .brand-role-closing {
+        width: 250px;
+
+        margin-top: 4rem;
+    }
+
+
+    .brand-role-closing h2 {
+        font-size: 3.4rem;
+    }
+
+
+    /* FOOTER */
+
+    .brand-role-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+
+        bottom: 1.5rem;
+    }
+
+
+    .brand-role-footer .page-progress {
+        display: none;
+    }
+
+
+    .brand-role-footer .page-nav {
+        font-size: 0.55rem;
+    }
+
+
+    /* BACKGROUND */
+
+    .brand-role-page::before {
+        right: -1rem;
+        bottom: 0;
+
+        font-size: 8rem;
+    }
+
+
+    .brand-role-page::after {
+        width: 100vw;
+        height: 100vw;
+
+        right: -60vw;
+        top: 20vh;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .brand-role-page *,
+    .brand-role-page *::before,
+    .brand-role-page *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
