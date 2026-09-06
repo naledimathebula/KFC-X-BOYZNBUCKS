@@ -1,0 +1,716 @@
+/* =========================================================
+   KFC × BOYZNBUCK$
+   PAGE 05 — THE BIG IDEA
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --kfc-red: #e4002b;
+    --muted-white: rgba(255, 255, 255, 0.68);
+    --faint-white: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAGE 05
+   ========================================================= */
+
+.big-idea-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 3rem 4rem 8rem;
+
+    background: var(--black);
+    color: var(--white);
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.big-idea-top {
+    position: absolute;
+
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 30;
+}
+
+.big-idea-top .page-label {
+    color: var(--kfc-red);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.3em;
+
+    text-transform: uppercase;
+}
+
+.big-idea-top .page-number {
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.big-idea-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: calc(100vh - 11rem);
+
+    margin: 0 auto;
+
+    padding-top: 16vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   SMALL LABEL
+   ========================================================= */
+
+.big-idea-label {
+    position: relative;
+
+    margin-bottom: 1.5rem;
+
+    color: var(--kfc-red);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.3em;
+
+    text-transform: uppercase;
+
+    z-index: 15;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.big-idea-heading {
+    position: relative;
+
+    max-width: 1250px;
+
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(5rem, 11vw, 12rem);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.045em;
+
+    text-transform: uppercase;
+
+    z-index: 15;
+}
+
+.big-idea-heading span {
+    display: block;
+
+    color: var(--kfc-red);
+}
+
+
+/* =========================================================
+   RED DIVIDER
+   ========================================================= */
+
+.big-idea-line {
+    width: 90px;
+    height: 4px;
+
+    margin-top: 2.8rem;
+
+    background: var(--kfc-red);
+}
+
+
+/* =========================================================
+   SUPPORTING COPY
+   ========================================================= */
+
+.big-idea-copy {
+    position: relative;
+
+    max-width: 850px;
+
+    margin-top: 3rem;
+    margin-left: 20%;
+
+    color: var(--muted-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: clamp(0.9rem, 1.3vw, 1.15rem);
+
+    font-weight: 600;
+
+    line-height: 1.65;
+
+    letter-spacing: 0.01em;
+
+    text-transform: uppercase;
+
+    z-index: 15;
+}
+
+.big-idea-copy p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   SECOND STATEMENT
+   ========================================================= */
+
+.big-idea-location {
+    position: relative;
+
+    margin-top: 1.5rem;
+
+    color: var(--white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: clamp(0.75rem, 1vw, 0.95rem);
+
+    font-weight: 800;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    z-index: 15;
+}
+
+.big-idea-location::before {
+    content: "→ ";
+
+    color: var(--kfc-red);
+}
+
+
+/* =========================================================
+   FINAL STATEMENT
+   ========================================================= */
+
+.big-idea-final {
+    position: relative;
+
+    margin-top: 3.5rem;
+
+    padding-top: 1.5rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 1.2rem;
+
+    z-index: 15;
+}
+
+.big-idea-final-label {
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.big-idea-final strong {
+    color: var(--kfc-red);
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+
+    font-weight: 400;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LOCATION FOOTER
+   ========================================================= */
+
+.big-idea-location-footer {
+    position: absolute;
+
+    left: 4rem;
+    bottom: 3rem;
+
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    z-index: 40;
+}
+
+.big-idea-location-footer span {
+    color: var(--kfc-red);
+}
+
+
+/* =========================================================
+   BACKGROUND — GIANT 05
+   ========================================================= */
+
+.big-idea-page::before {
+    content: "05";
+
+    position: absolute;
+
+    right: -2rem;
+    bottom: -5rem;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: 25rem;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   BACKGROUND — RED CIRCLE
+   ========================================================= */
+
+.big-idea-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 55vw;
+    height: 55vw;
+
+    right: -30vw;
+    top: 12vh;
+
+    border: 1px solid rgba(228, 0, 43, 0.14);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   FOOTER NAVIGATION
+   ========================================================= */
+
+.big-idea-page .page-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 50;
+}
+
+.big-idea-page .page-nav {
+    color: var(--white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.big-idea-page .page-nav:hover {
+    color: var(--kfc-red);
+}
+
+.big-idea-page .page-nav.previous:hover {
+    transform: translateX(-5px);
+}
+
+.big-idea-page .page-nav.next:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PAGE PROGRESS
+   ========================================================= */
+
+.big-idea-page .page-progress {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    color: var(--faint-white);
+
+    font-size: 0.55rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+.footer-line {
+    display: block;
+
+    width: 70px;
+    height: 1px;
+
+    background: var(--kfc-red);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .big-idea-page {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .big-idea-top {
+        left: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .big-idea-content {
+        padding-top: 15vh;
+    }
+
+    .big-idea-heading {
+        font-size: clamp(5rem, 12vw, 9rem);
+    }
+
+    .big-idea-copy {
+        margin-left: 10%;
+    }
+
+    .big-idea-page .page-footer {
+        left: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .big-idea-location-footer {
+        left: 2.5rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .big-idea-page {
+        min-height: 100svh;
+
+        padding: 1.5rem 1.5rem 7rem;
+    }
+
+
+    /* TOP */
+
+    .big-idea-top {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        margin-bottom: 4rem;
+
+        z-index: 30;
+    }
+
+    .big-idea-top .page-label {
+        font-size: 0.6rem;
+
+        letter-spacing: 0.22em;
+    }
+
+    .big-idea-top .page-number {
+        font-size: 0.55rem;
+    }
+
+
+    /* CONTENT */
+
+    .big-idea-content {
+        min-height: auto;
+
+        padding-top: 5vh;
+
+        justify-content: flex-start;
+
+        z-index: 10;
+    }
+
+
+    /* LABEL */
+
+    .big-idea-label {
+        font-size: 0.6rem;
+
+        margin-bottom: 1rem;
+    }
+
+
+    /* HEADING */
+
+    .big-idea-heading {
+        font-size: clamp(3.8rem, 18vw, 6.5rem);
+
+        line-height: 0.8;
+
+        letter-spacing: -0.04em;
+    }
+
+
+    /* RED LINE */
+
+    .big-idea-line {
+        width: 60px;
+
+        height: 3px;
+
+        margin-top: 2rem;
+    }
+
+
+    /* COPY */
+
+    .big-idea-copy {
+        max-width: 100%;
+
+        margin: 2rem 0 0;
+
+        font-size: 0.72rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* LOCATION */
+
+    .big-idea-location {
+        margin-top: 1.3rem;
+
+        font-size: 0.65rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* FINAL */
+
+    .big-idea-final {
+        margin-top: 2.5rem;
+
+        display: block;
+    }
+
+    .big-idea-final-label {
+        display: block;
+
+        margin-bottom: 0.7rem;
+
+        font-size: 0.55rem;
+    }
+
+    .big-idea-final strong {
+        display: block;
+
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+    }
+
+
+    /* LOCATION FOOTER */
+
+    .big-idea-location-footer {
+        display: none;
+    }
+
+
+    /* FOOTER */
+
+    .big-idea-page .page-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+
+        bottom: 1.5rem;
+    }
+
+    .big-idea-page .page-progress {
+        display: none;
+    }
+
+    .big-idea-page .page-nav {
+        font-size: 0.55rem;
+    }
+
+
+    /* BACKGROUND */
+
+    .big-idea-page::before {
+        right: -1rem;
+
+        bottom: 4rem;
+
+        font-size: 10rem;
+    }
+
+    .big-idea-page::after {
+        width: 80vw;
+
+        height: 80vw;
+
+        right: -45vw;
+
+        top: 30vh;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        animation: none !important;
+
+        transition: none !important;
+    }
+}

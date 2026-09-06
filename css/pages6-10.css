@@ -2506,129 +2506,30 @@
 
 
 /* =========================================================
+   KFC × BOYZNBUCK$
    PAGE 10 — THE FINAL STATEMENT
-   KFC X BOYZNBUCK$
+   FINAL / HERO PAGE
+   ========================================================= */
+
+/* =========================================================
+   PAGE WRAPPER
    ========================================================= */
 
 .final-statement-page {
-    --black: #000000;
-    --white: #ffffff;
-    --red: #e4002b;
-    --muted: rgba(255, 255, 255, 0.68);
-    --faint: rgba(255, 255, 255, 0.08);
-
     position: relative;
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 3rem 4rem 8rem;
+
+    background: #000000;
+    color: #ffffff;
+
     overflow: hidden;
-
-    background: var(--black);
-    color: var(--white);
-
-    font-family: "Inter", sans-serif;
 
     display: flex;
     flex-direction: column;
-
-    padding: 3rem 4rem;
-    box-sizing: border-box;
-}
-
-
-/* =========================================================
-   GIANT BACKGROUND WORD
-   ========================================================= */
-
-.final-bg-word {
-    position: absolute;
-
-    left: -2%;
-    bottom: 5%;
-
-    font-family: "Anton", Impact, sans-serif;
-    font-size: clamp(10rem, 25vw, 32rem);
-    line-height: 0.75;
-
-    text-transform: uppercase;
-    letter-spacing: -0.04em;
-
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.07);
-
-    white-space: nowrap;
-
-    pointer-events: none;
-    user-select: none;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   GIANT PAGE NUMBER
-   ========================================================= */
-
-.final-statement-page::before {
-    content: "10";
-
-    position: absolute;
-
-    top: 9rem;
-    right: 4rem;
-
-    font-family: "Anton", Impact, sans-serif;
-    font-size: clamp(8rem, 18vw, 18rem);
-    line-height: 0.8;
-
-    color: rgba(255, 255, 255, 0.025);
-
-    pointer-events: none;
-    user-select: none;
-
-    z-index: 0;
-}
-
-
-/* =========================================================
-   RED CIRCLE
-   ========================================================= */
-
-.final-accent {
-    position: absolute;
-
-    width: 420px;
-    height: 420px;
-
-    right: -180px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    border: 2px solid rgba(228, 0, 43, 0.8);
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 0 35px rgba(228, 0, 43, 0.025),
-        0 0 0 70px rgba(228, 0, 43, 0.018);
-
-    z-index: 0;
-
-    pointer-events: none;
-}
-
-
-/* Inner circle */
-
-.final-accent::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 35px;
-
-    border: 1px solid rgba(228, 0, 43, 0.35);
-
-    border-radius: 50%;
 }
 
 
@@ -2637,48 +2538,97 @@
    ========================================================= */
 
 .final-statement-top {
-    position: relative;
+    position: absolute;
 
-    width: 100%;
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    padding-bottom: 1.25rem;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-
-    z-index: 5;
+    z-index: 20;
 }
-
-
-/* Left label */
 
 .final-kicker {
-    font-family: "Inter", sans-serif;
+    color: #e4002b;
 
-    font-size: 0.72rem;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
     font-weight: 800;
 
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    letter-spacing: 0.15em;
 
-    color: var(--red);
+    text-transform: uppercase;
 }
 
-
-/* Page number */
-
 .final-page-number {
-    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.45);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 
     font-size: 0.7rem;
     font-weight: 700;
 
     letter-spacing: 0.12em;
+}
 
-    color: rgba(255, 255, 255, 0.45);
+
+/* =========================================================
+   BACKGROUND WORD
+   ========================================================= */
+
+.final-bg-word {
+    position: absolute;
+
+    right: -8vw;
+    bottom: -5vh;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(15rem, 32vw, 35rem);
+
+    line-height: 0.72;
+
+    letter-spacing: -0.06em;
+
+    color: #ffffff;
+
+    opacity: 0.025;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   RED ACCENT CIRCLE
+   ========================================================= */
+
+.final-accent {
+    position: absolute;
+
+    width: 55vw;
+    height: 55vw;
+
+    right: -30vw;
+    top: 10vh;
+
+    border: 1px solid rgba(228, 0, 43, 0.18);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation: finalCircleIn 1.8s ease forwards;
 }
 
 
@@ -2689,18 +2639,21 @@
 .final-statement-hero {
     position: relative;
 
-    z-index: 2;
+    width: 100%;
+    max-width: 1500px;
 
-    flex: 1;
+    min-height: calc(100vh - 11rem);
+
+    margin: 0 auto;
+
+    padding-top: 15vh;
 
     display: flex;
     flex-direction: column;
 
     justify-content: center;
 
-    max-width: 1250px;
-
-    padding: 4rem 0 7rem;
+    z-index: 5;
 }
 
 
@@ -2709,17 +2662,23 @@
    ========================================================= */
 
 .final-label {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
 
-    font-family: "Inter", sans-serif;
+    color: #e4002b;
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 
     font-size: 0.75rem;
     font-weight: 800;
 
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
+
     text-transform: uppercase;
 
-    color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+
+    animation: finalLabelIn 0.8s ease forwards;
+    animation-delay: 0.1s;
 }
 
 
@@ -2728,36 +2687,38 @@
    ========================================================= */
 
 .final-main-heading {
+    max-width: 1250px;
+
     margin: 0;
 
     font-family: "Anton", Impact, sans-serif;
 
-    font-size: clamp(4.5rem, 9vw, 10rem);
+    font-size: clamp(5rem, 11vw, 12rem);
 
     font-weight: 400;
 
-    line-height: 0.88;
+    line-height: 0.76;
 
-    letter-spacing: -0.025em;
+    letter-spacing: -0.045em;
 
     text-transform: uppercase;
 
-    color: var(--white);
+    color: #ffffff;
 
-    max-width: 1150px;
+    opacity: 0;
+
+    animation: finalHeadingIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+    animation-delay: 0.25s;
 }
 
 
-/* Red second line */
+/* RED LINE IN HEADING */
 
 .final-main-heading span {
     display: block;
 
-    color: var(--red);
-
-    font-size: 1.12em;
-
-    margin-top: 0.05em;
+    color: #e4002b;
 }
 
 
@@ -2766,31 +2727,22 @@
    ========================================================= */
 
 .final-divider {
-    width: 150px;
-    height: 5px;
+    width: 110px;
+    height: 4px;
 
-    background: var(--red);
+    margin-top: 3rem;
 
-    margin: 2.5rem 0 2rem;
+    background: #e4002b;
 
-    position: relative;
-}
+    transform-origin: left;
 
+    transform: scaleX(0);
 
-/* Small white extension */
+    opacity: 0;
 
-.final-divider::after {
-    content: "";
+    animation: finalDividerIn 0.8s ease forwards;
 
-    position: absolute;
-
-    left: 160px;
-    top: 0;
-
-    width: 45px;
-    height: 5px;
-
-    background: var(--white);
+    animation-delay: 0.75s;
 }
 
 
@@ -2799,41 +2751,49 @@
    ========================================================= */
 
 .final-statement-copy {
-    max-width: 850px;
+    max-width: 820px;
 
-    margin: 0;
+    margin-top: 2.5rem;
 
-    font-family: "Inter", sans-serif;
+    margin-left: 18%;
 
-    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: clamp(0.95rem, 1.35vw, 1.2rem);
 
     font-weight: 500;
 
     line-height: 1.65;
 
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
 
     text-transform: uppercase;
 
-    color: var(--muted);
+    opacity: 0;
+
+    animation: finalCopyIn 0.9s ease forwards;
+
+    animation-delay: 0.95s;
 }
 
 
-/* Bold BOYZNBUCK$ */
+/* STRONG BOYZnBUCK$ */
 
 .final-statement-copy strong {
-    color: var(--white);
+    color: #ffffff;
 
-    font-weight: 900;
+    font-weight: 800;
 }
 
 
-/* Red highlight */
+/* RED EMPHASIS */
 
 .final-statement-copy .red {
-    color: var(--red);
+    color: #e4002b;
 
-    font-weight: 900;
+    font-weight: 800;
 }
 
 
@@ -2842,26 +2802,29 @@
    ========================================================= */
 
 .final-credit {
-    margin-top: 2.5rem;
+    margin-top: 2.8rem;
 
-    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.4);
 
-    font-size: 0.7rem;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
 
     font-weight: 700;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.2em;
 
     text-transform: uppercase;
 
-    color: rgba(255, 255, 255, 0.45);
+    opacity: 0;
+
+    animation: finalCreditIn 0.8s ease forwards;
+
+    animation-delay: 1.2s;
 }
 
-
 .final-credit span {
-    color: var(--white);
-
-    margin-left: 0.35rem;
+    color: #ffffff;
 }
 
 
@@ -2872,16 +2835,24 @@
 .final-red-line {
     position: absolute;
 
-    left: 0;
-    right: 0;
+    left: 4rem;
+    right: 4rem;
 
-    bottom: 6.5rem;
+    bottom: 5.8rem;
 
-    height: 3px;
+    height: 1px;
 
-    background: var(--red);
+    background: rgba(228, 0, 43, 0.6);
 
-    z-index: 3;
+    transform-origin: left;
+
+    transform: scaleX(0);
+
+    animation: finalLineIn 1s ease forwards;
+
+    animation-delay: 1.3s;
+
+    z-index: 8;
 }
 
 
@@ -2894,58 +2865,58 @@
 
     left: 4rem;
     right: 4rem;
-    bottom: 2rem;
+
+    bottom: 2.8rem;
 
     display: flex;
 
-    justify-content: space-between;
     align-items: center;
 
-    z-index: 10;
+    justify-content: space-between;
 
-    margin: 0;
-}
-
-
-/* Navigation */
-
-.final-statement-page .page-nav {
-    color: rgba(255, 255, 255, 0.65);
-
-    text-decoration: none;
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 0.68rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.14em;
-
-    text-transform: uppercase;
-
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
-}
-
-
-.final-statement-page .page-nav:hover {
-    color: var(--red);
-
-    transform: translateX(4px);
-}
-
-
-/* Previous hover goes left */
-
-.final-statement-page .page-nav:first-child:hover {
-    transform: translateX(-4px);
+    z-index: 20;
 }
 
 
 /* =========================================================
-   PROGRESS
+   FOOTER NAV
+   ========================================================= */
+
+.final-statement-page .page-nav {
+    color: #ffffff;
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.final-statement-page .page-nav:hover {
+    color: #e4002b;
+}
+
+.final-statement-page .page-nav:first-child:hover {
+    transform: translateX(-5px);
+}
+
+.final-statement-page .page-nav:last-child:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PAGE PROGRESS
    ========================================================= */
 
 .final-statement-page .page-progress {
@@ -2953,28 +2924,22 @@
 
     align-items: center;
 
-    gap: 7px;
+    gap: 0.45rem;
 }
-
 
 .final-statement-page .page-progress span {
     display: block;
 
-    width: 22px;
+    width: 18px;
     height: 2px;
 
     background: rgba(255, 255, 255, 0.2);
-
-    transition:
-        background 0.25s ease,
-        width 0.25s ease;
 }
 
-
 .final-statement-page .page-progress span.active {
-    width: 42px;
+    width: 38px;
 
-    background: var(--red);
+    background: #e4002b;
 }
 
 
@@ -2982,72 +2947,8 @@
    ANIMATIONS
    ========================================================= */
 
-.final-statement-hero {
-    animation: finalHeroReveal 0.9s ease-out both;
-}
+@keyframes finalLabelIn {
 
-
-.final-main-heading {
-    animation: finalHeadingReveal 1s ease-out 0.15s both;
-}
-
-
-.final-divider {
-    animation: finalLineReveal 0.8s ease-out 0.4s both;
-}
-
-
-.final-statement-copy {
-    animation: finalCopyReveal 0.8s ease-out 0.55s both;
-}
-
-
-.final-credit {
-    animation: finalCopyReveal 0.8s ease-out 0.7s both;
-}
-
-
-.final-accent {
-    animation: finalCircleReveal 1.2s ease-out both;
-}
-
-
-@keyframes finalHeroReveal {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-@keyframes finalHeadingReveal {
-    from {
-        opacity: 0;
-        transform: translateY(35px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes finalLineReveal {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 150px;
-    }
-}
-
-
-@keyframes finalCopyReveal {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -3057,19 +2958,95 @@
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 
-@keyframes finalCircleReveal {
+@keyframes finalHeadingIn {
+
     from {
         opacity: 0;
-        transform: translateY(-50%) scale(0.8);
+        transform: translateY(60px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(-50%) scale(1);
+        transform: translateY(0);
     }
+
+}
+
+
+@keyframes finalDividerIn {
+
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+}
+
+
+@keyframes finalCopyIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes finalCreditIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes finalLineIn {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+@keyframes finalCircleIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
 }
 
 
@@ -3077,35 +3054,41 @@
    TABLET
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .final-statement-page {
-        padding: 2.5rem 2.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .final-statement-top {
+        left: 2rem;
+        right: 2rem;
     }
 
     .final-statement-hero {
-        padding-top: 3rem;
+        padding-top: 14vh;
     }
 
     .final-main-heading {
-        font-size: clamp(4rem, 10vw, 7rem);
+        font-size: clamp(5rem, 13vw, 10rem);
     }
 
-    .final-accent {
-        width: 300px;
-        height: 300px;
-
-        right: -160px;
-    }
-
-    .final-statement-page .page-footer {
-        left: 2.5rem;
-        right: 2.5rem;
+    .final-statement-copy {
+        margin-left: 8%;
+        max-width: 700px;
     }
 
     .final-red-line {
-        bottom: 6rem;
+        left: 2rem;
+        right: 2rem;
     }
+
+    .final-statement-page .page-footer {
+        left: 2rem;
+        right: 2rem;
+    }
+
 }
 
 
@@ -3116,136 +3099,135 @@
 @media (max-width: 600px) {
 
     .final-statement-page {
-        min-height: 100vh;
+        min-height: 100svh;
 
-        padding: 1.75rem 1.5rem 6rem;
+        padding: 1.5rem 1.5rem 7rem;
 
         overflow-y: auto;
     }
 
 
-    .final-statement-top {
-        padding-bottom: 1rem;
-    }
+    /* TOP */
 
+    .final-statement-top {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        margin-bottom: 5rem;
+    }
 
     .final-kicker {
         font-size: 0.6rem;
     }
 
-
     .final-page-number {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
     }
 
+
+    /* HERO */
 
     .final-statement-hero {
-        padding: 4rem 0 4rem;
+        min-height: auto;
 
-        justify-content: center;
+        padding-top: 0;
+
+        justify-content: flex-start;
     }
-
 
     .final-label {
-        font-size: 0.62rem;
+        font-size: 0.6rem;
 
-        margin-bottom: 1.25rem;
+        letter-spacing: 0.22em;
+
+        margin-bottom: 1.2rem;
     }
-
 
     .final-main-heading {
-        font-size: clamp(3.5rem, 16vw, 6rem);
+        font-size: clamp(4rem, 18vw, 7rem);
 
-        line-height: 0.9;
+        line-height: 0.8;
     }
-
 
     .final-divider {
-        margin: 2rem 0 1.5rem;
+        width: 65px;
 
-        width: 100px;
+        height: 3px;
+
+        margin-top: 2rem;
     }
-
-
-    .final-divider::after {
-        left: 110px;
-
-        width: 30px;
-    }
-
 
     .final-statement-copy {
-        font-size: 0.85rem;
+        margin-left: 0;
+
+        margin-top: 2rem;
+
+        max-width: 100%;
+
+        font-size: 0.78rem;
 
         line-height: 1.6;
     }
-
 
     .final-credit {
-        font-size: 0.58rem;
+        margin-top: 2rem;
 
-        line-height: 1.6;
+        font-size: 0.52rem;
 
-        max-width: 280px;
+        line-height: 1.5;
     }
 
 
-    .final-accent {
-        width: 250px;
-        height: 250px;
-
-        right: -150px;
-        top: 58%;
-    }
-
+    /* BACKGROUND */
 
     .final-bg-word {
-        font-size: 9rem;
+        right: -12vw;
 
-        bottom: 14%;
+        bottom: 10vh;
 
-        left: -10%;
+        font-size: 42vw;
+    }
+
+    .final-accent {
+        width: 85vw;
+        height: 85vw;
+
+        right: -50vw;
+
+        top: 35vh;
     }
 
 
-    .final-statement-page::before {
-        font-size: 8rem;
-
-        top: 7rem;
-        right: 1rem;
-    }
-
+    /* LINE */
 
     .final-red-line {
-        bottom: 5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+
+        bottom: 5.2rem;
     }
 
+
+    /* FOOTER */
 
     .final-statement-page .page-footer {
         left: 1.5rem;
         right: 1.5rem;
+
         bottom: 1.5rem;
     }
 
+    .final-statement-page .page-progress {
+        display: none;
+    }
 
     .final-statement-page .page-nav {
         font-size: 0.55rem;
     }
 
-
-    .final-statement-page .page-progress {
-        gap: 4px;
-    }
-
-
-    .final-statement-page .page-progress span {
-        width: 12px;
-    }
-
-
-    .final-statement-page .page-progress span.active {
-        width: 22px;
-    }
 }
 
 
@@ -3255,12 +3237,18 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-    .final-statement-hero,
+    .final-label,
     .final-main-heading,
     .final-divider,
     .final-statement-copy,
     .final-credit,
+    .final-red-line,
     .final-accent {
         animation: none;
+
+        opacity: 1;
+
+        transform: none;
     }
+
 }
