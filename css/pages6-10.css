@@ -1898,3 +1898,608 @@
         gap: 15px;
     }
 }
+
+
+/* =========================================================
+   PAGE 09 — CULTURAL OWNERSHIP
+   ========================================================= */
+
+.ownership-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 3rem 4rem 8rem;
+    background: var(--black);
+    color: var(--white);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.ownership-top {
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+.ownership-top .page-label {
+    color: var(--kfc-red);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.ownership-top .page-number {
+    color: var(--faint-white);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ownership-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    padding-top: 16vh;
+
+    z-index: 5;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.ownership-hero.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   KICKER
+   ========================================================= */
+
+.ownership-kicker {
+    margin-bottom: 1.5rem;
+
+    color: var(--kfc-red);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.ownership-heading {
+    max-width: 1200px;
+
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(5rem, 11vw, 12rem);
+    font-weight: 400;
+
+    line-height: 0.76;
+    letter-spacing: -0.045em;
+
+    text-transform: uppercase;
+
+    color: var(--white);
+}
+
+.ownership-heading span {
+    display: block;
+    color: var(--kfc-red);
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.ownership-divider {
+    width: 90px;
+    height: 3px;
+
+    margin-top: 2.5rem;
+
+    background: var(--kfc-red);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.ownership-intro {
+    max-width: 680px;
+
+    margin-top: 2rem;
+    margin-left: 20%;
+
+    color: var(--muted-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   OWNERSHIP STATEMENT
+   ========================================================= */
+
+.ownership-statement {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 4rem auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8rem;
+
+    z-index: 5;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.ownership-statement.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   COPY BLOCK
+   ========================================================= */
+
+.ownership-copy {
+    padding-top: 1rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ownership-label {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.62rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.ownership-copy p {
+    max-width: 500px;
+
+    color: var(--muted-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    text-transform: uppercase;
+}
+
+.ownership-copy-right {
+    padding-left: 2rem;
+}
+
+.ownership-copy strong {
+    display: block;
+
+    max-width: 430px;
+
+    margin-top: 1.2rem;
+
+    color: var(--white);
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-weight: 400;
+
+    line-height: 0.82;
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+}
+
+.ownership-copy strong::first-line {
+    color: var(--kfc-red);
+}
+
+
+/* =========================================================
+   FINAL OWNERSHIP STATEMENT
+   ========================================================= */
+
+.ownership-final {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 5rem auto 0;
+
+    z-index: 5;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.ownership-final.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ownership-final > span {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.62rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.ownership-final h2 {
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: clamp(3rem, 6vw, 7rem);
+    font-weight: 400;
+
+    line-height: 0.78;
+    letter-spacing: -0.04em;
+
+    text-transform: uppercase;
+
+    color: var(--white);
+}
+
+.ownership-final h2 span {
+    color: var(--kfc-red);
+}
+
+.ownership-final .ownership-red {
+    color: var(--kfc-red);
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.ownership-page::before {
+    content: "09";
+
+    position: absolute;
+
+    right: -2rem;
+    bottom: -5rem;
+
+    font-family: "Anton", Impact, sans-serif;
+    font-size: 25rem;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+.ownership-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 48vw;
+    height: 48vw;
+
+    right: -27vw;
+    top: 10vh;
+
+    border: 1px solid rgba(228, 0, 43, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.ownership-footer {
+    position: absolute;
+
+    left: 4rem;
+    right: 4rem;
+    bottom: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 50;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.ownership-footer .page-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.ownership-footer .page-progress span {
+    display: block;
+
+    width: 18px;
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.ownership-footer .page-progress span.active {
+    width: 35px;
+    background: var(--kfc-red);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .ownership-page {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .ownership-top {
+        left: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .ownership-heading {
+        font-size: clamp(5rem, 12vw, 9rem);
+    }
+
+    .ownership-intro {
+        margin-left: 10%;
+    }
+
+    .ownership-statement {
+        gap: 3rem;
+    }
+
+    .ownership-footer {
+        left: 2.5rem;
+        right: 2.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .ownership-page {
+        min-height: 100svh;
+
+        padding: 1.5rem 1.5rem 7rem;
+
+        overflow-y: auto;
+    }
+
+
+    /* TOP */
+
+    .ownership-top {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        margin-bottom: 4.5rem;
+    }
+
+    .ownership-top .page-label {
+        font-size: 0.6rem;
+    }
+
+    .ownership-top .page-number {
+        font-size: 0.55rem;
+    }
+
+
+    /* HERO */
+
+    .ownership-hero {
+        padding-top: 0;
+    }
+
+    .ownership-kicker {
+        font-size: 0.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .ownership-heading {
+        font-size: clamp(3.7rem, 17vw, 6.5rem);
+        line-height: 0.81;
+    }
+
+    .ownership-divider {
+        width: 60px;
+        height: 3px;
+
+        margin-top: 2rem;
+    }
+
+    .ownership-intro {
+        margin: 1.8rem 0 0;
+
+        max-width: 340px;
+
+        font-size: 0.68rem;
+        line-height: 1.55;
+    }
+
+
+    /* STATEMENT */
+
+    .ownership-statement {
+        margin-top: 3rem;
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+    }
+
+    .ownership-copy-right {
+        padding-left: 12%;
+    }
+
+    .ownership-copy p {
+        font-size: 0.68rem;
+        line-height: 1.55;
+    }
+
+    .ownership-copy strong {
+        font-size: clamp(2.6rem, 12vw, 4rem);
+    }
+
+
+    /* FINAL */
+
+    .ownership-final {
+        margin-top: 4rem;
+    }
+
+    .ownership-final h2 {
+        font-size: clamp(3rem, 13vw, 4.8rem);
+    }
+
+
+    /* BACKGROUND */
+
+    .ownership-page::before {
+        right: -1rem;
+        bottom: 5rem;
+        font-size: 12rem;
+    }
+
+    .ownership-page::after {
+        width: 80vw;
+        height: 80vw;
+
+        right: -45vw;
+        top: 35vh;
+    }
+
+
+    /* FOOTER */
+
+    .ownership-footer {
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    .ownership-footer .page-progress {
+        display: none;
+    }
+
+    .ownership-footer .page-nav {
+        font-size: 0.55rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ownership-hero,
+    .ownership-statement,
+    .ownership-final {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+}
