@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Access Point — KFC X BOYZNBUCK$</title>
+
+  <!-- GLOBAL SITE STYLE -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- PAGES 06–10 STYLE -->
+  <link rel="stylesheet" href="css/pages6-10.css">
+</head>
+
+<body>
+
+  <main class="access-point-page">
+
+    <!-- PAGE HEADER -->
+    <header class="access-point-top">
+      <span class="page-label">THE ACCESS POINT</span>
+      <span class="page-number">07 / 10</span>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="access-point-hero">
+
+      <div class="access-kicker">
+        THE ONLY WAY IN
+      </div>
+
+      <h1 class="access-heading">
+        ONE MEAL.
+        <span>ONE RECEIPT.</span>
+        ONE WAY IN.
+      </h1>
+
+      <p class="access-intro">
+        THE BOYZNBUCK$ COMEBACK
+        DOESN'T HAPPEN EVERYWHERE.
+        IT HAPPENS AT KFC KENTUCKY TOWN.
+      </p>
+
+    </section>
+
+
+    <!-- CUSTOMER JOURNEY -->
+    <section class="access-journey">
+
+      <!-- STEP 01 -->
+      <article class="access-step">
+
+        <span class="access-number">01</span>
+
+        <div class="access-step-content">
+
+          <span class="access-step-label">
+            BUY
+          </span>
+
+          <h2>
+            STREETWISE 2
+          </h2>
+
+          <p>
+            BUY A STREETWISE 2 MEAL AT KFC KENTUCKY TOWN.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STEP 02 -->
+      <article class="access-step">
+
+        <span class="access-number">02</span>
+
+        <div class="access-step-content">
+
+          <span class="access-step-label">
+            SCAN
+          </span>
+
+          <h2>
+            YOUR RECEIPT
+          </h2>
+
+          <p>
+            SCAN YOUR TILL SLIP TO UNLOCK ACCESS.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STEP 03 -->
+      <article class="access-step">
+
+        <span class="access-number">03</span>
+
+        <div class="access-step-content">
+
+          <span class="access-step-label">
+            UNLOCK
+          </span>
+
+          <h2>
+            YOUR TICKET
+          </h2>
+
+          <p>
+            YOUR RECEIPT BECOMES YOUR TICKET TO THE COMEBACK.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- STEP 04 -->
+      <article class="access-step">
+
+        <span class="access-number">04</span>
+
+        <div class="access-step-content">
+
+          <span class="access-step-label">
+            ENTER
+          </span>
+
+          <h2>
+            MEET BOYZNBUCK$
+          </h2>
+
+          <p>
+            YOUR TICKET GETS YOU INTO THE KENTUCKY TOWN EXPERIENCE.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- CLOSING STATEMENT -->
+    <section class="access-statement">
+
+      <span>
+        KENTUCKY TOWN
+      </span>
+
+      <strong>
+        IS THE ONLY WAY IN.
+      </strong>
+
+    </section>
+
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="page-footer">
+
+      <a href="brand-role.html" class="page-nav previous">
+        ← PREVIOUS
+      </a>
+
+      <div class="page-progress">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
+      <a href="merch-drop.html" class="page-nav next">
+        NEXT →
+      </a>
+
+    </footer>
+
+  </main>
+
+
+  <!-- PAGE ANIMATION -->
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const hero =
+        document.querySelector(".access-point-hero");
+
+      const steps =
+        document.querySelectorAll(".access-step");
+
+      const statement =
+        document.querySelector(".access-statement");
+
+
+      /* HERO */
+
+      setTimeout(() => {
+
+        hero.classList.add("show");
+
+      }, 150);
+
+
+      /* STEPS */
+
+      steps.forEach((step, index) => {
+
+        setTimeout(() => {
+
+          step.classList.add("show");
+
+        }, 500 + (index * 160));
+
+      });
+
+
+      /* STATEMENT */
+
+      setTimeout(() => {
+
+        statement.classList.add("show");
+
+      }, 1250);
+
+    });
+
+  </script>
+
+</body>
+</html>

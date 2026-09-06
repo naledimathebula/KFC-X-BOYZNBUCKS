@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Merch Drop — KFC X BOYZNBUCK$</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- GLOBAL SITE STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- PAGES 06–10 STYLE -->
+    <link rel="stylesheet" href="css/pages6-10.css">
+</head>
+
+<body>
+
+    <main class="merch-drop-page">
+
+        <!-- MAIN SCROLLABLE CONTENT -->
+        <div class="merch-drop-content">
+
+            <!-- TOP BAR -->
+            <header class="merch-drop-top">
+                <span class="page-label">THE MERCH DROP</span>
+                <span class="page-number">08 / 10</span>
+            </header>
+
+
+            <!-- HERO -->
+            <section class="merch-drop-hero">
+
+                <div class="merch-copy">
+
+                    <span class="merch-kicker">
+                        LIMITED ACCESS. LIMITED DROP.
+                    </span>
+
+                    <h1 class="merch-heading">
+                        <span class="line">THE DROP</span>
+                        <span class="line">IS PART OF</span>
+                        <span class="line">THE COMEBACK.</span>
+                    </h1>
+
+                    <p class="merch-intro">
+                        A LIMITED KFC × BOYZNBUCK$ COLLECTION,
+                        INSPIRED BY THE ORIGINALS WHO DEFINED
+                        SOUTH AFRICAN STREET CULTURE.
+                    </p>
+
+                    <p class="merch-access">
+                        UNLOCKED WITH YOUR STREETWISE 2 RECEIPT
+                        AT KFC KENTUCKY TOWN.
+                    </p>
+
+                </div>
+
+
+                <!-- MAIN IMAGE -->
+                <div class="merch-main-image">
+
+                    <!-- REPLACE THIS IMAGE PATH -->
+                    <img
+                        src="images/boyzbucks-merch-main.jpg"
+                        alt="KFC X BOYZNBUCK$ limited merchandise"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- MERCH GRID -->
+            <section class="merch-grid">
+
+                <!-- PRODUCT 01 -->
+                <article class="merch-item">
+
+                    <div class="merch-image">
+
+                        <!-- REPLACE THIS IMAGE PATH -->
+                        <img
+                            src="images/TEE.jpeg"
+                            alt="KFC X BOYZNBUCK$ TEE"
+                        >
+
+                    </div>
+
+                    <div class="merch-item-info">
+                        <span class="merch-number">01</span>
+                        <h2>TEE</h2>
+                        <p>
+                            ICONIC BOYZNBUCK$ ENERGY.
+                            KFC DNA.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 02 -->
+                <article class="merch-item">
+
+                    <div class="merch-image">
+
+                        <!-- REPLACE THIS IMAGE PATH -->
+                        <img
+                            src="images/SHORTS.jpeg"
+                            alt="KFC X BOYZNBUCK$ shirt"
+                        >
+
+                    </div>
+
+                    <div class="merch-item-info">
+                        <span class="merch-number">02</span>
+                        <h2>SHORTS</h2>
+                        <p>
+                            A PIECE OF THE COMEBACK
+                            YOU CAN WEAR.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 03 -->
+                <article class="merch-item">
+
+                    <div class="merch-image">
+
+                        <img
+                            src="images/boyzbucks-tote.jpg"
+                            alt="KFC X BOYZNBUCK$ tote bag"
+                        >
+
+                    </div>
+
+                    <div class="merch-item-info">
+                        <span class="merch-number">03</span>
+                        <h2>TOTE BAG</h2>
+                        <p>
+                            STREET CULTURE,
+                            CARRIED FORWARD.
+                        </p>
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- BOTTOM STATEMENT -->
+            <section class="merch-statement">
+
+                <span>NOT JUST MERCH.</span>
+
+                <strong>
+                    A PIECE OF THE
+                    <em>COMEBACK.</em>
+                </strong>
+
+            </section>
+
+        </div>
+
+
+        <!-- FOOTER — always pinned to the bottom -->
+        <footer class="page-footer">
+
+            <a href="access-point.html" class="page-nav">
+                ← PREVIOUS
+            </a>
+
+            <div class="page-progress">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <a href="cultural-ownership.html" class="page-nav">
+                NEXT →
+            </a>
+
+        </footer>
+
+    </main>
+
+
+    <!-- PAGE ANIMATION -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const hero = document.querySelector(".merch-drop-hero");
+            const items = document.querySelectorAll(".merch-item");
+            const statement = document.querySelector(".merch-statement");
+
+            setTimeout(() => {
+                hero.classList.add("show");
+            }, 150);
+
+            items.forEach((item, index) => {
+
+                setTimeout(() => {
+                    item.classList.add("show");
+                }, 500 + (index * 180));
+
+            });
+
+            setTimeout(() => {
+                statement.classList.add("show");
+            }, 1100);
+
+        });
+
+    </script>
+
+</body>
+</html>

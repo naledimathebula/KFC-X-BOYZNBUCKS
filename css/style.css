@@ -1965,251 +1965,611 @@ a {
     }
 }
 
-/* =====================================================
-   RESET
-===================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* =========================================================
+   PAGE 07 — THE ACCESS POINT
+   MATCHES EXISTING SITE SYSTEM
+   ========================================================= */
 
-html, body {
-    height: 100%;
-}
-
-body {
-    background: #0b0c10;
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-/* =====================================================
-   COLOR / FONT VARIABLES
-===================================================== */
-:root {
-    --kfc-red: #e4002b;
-    --bg-dark: #0b0c10;
-    --text-white: #ffffff;
-    --text-gray: #9ca0a8;
-    --line-gray: rgba(255, 255, 255, 0.15);
-}
-
-/* =====================================================
-   PAGE WRAPPER
-===================================================== */
-.big-idea-page {
+.access-point-page {
+    position: relative;
+    width: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 60px;
-    background: var(--bg-dark);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    min-height: 100svh;
+
+    padding: 3rem 4rem 8rem;
+
+    background: var(--black);
+    color: var(--white);
+
+    overflow: hidden;
 }
 
-.big-idea-page.big-idea-loaded {
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.access-point-top {
+    position: absolute;
+
+    top: 3rem;
+    left: 4rem;
+    right: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+}
+
+.access-point-top .page-label {
+    color: var(--kfc-red);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+.access-point-top .page-number {
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.access-point-hero {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: 38vh;
+
+    margin: 0 auto;
+
+    padding-top: 13vh;
+
+    z-index: 5;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.access-point-hero.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* =====================================================
-   TOP BAR
-===================================================== */
-.big-idea-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.page-label,
-.page-number {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-white);
-}
+/* =========================================================
+   KICKER
+   ========================================================= */
 
-/* =====================================================
-   MAIN CONTENT
-===================================================== */
-.big-idea-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 900px;
-    margin-top: 40px;
-}
+.access-kicker {
+    margin-bottom: 1.5rem;
 
-.big-idea-label {
-    font-size: 13px;
+    color: var(--kfc-red);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
     font-weight: 800;
-    letter-spacing: 3px;
+
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--kfc-red);
-    margin-bottom: 20px;
 }
 
-.big-idea-heading {
-    font-family: 'Anton', sans-serif;
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.access-heading {
+    max-width: 1100px;
+
+    margin: 0;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(5.5rem, 12vw, 13rem);
+
     font-weight: 400;
+
+    line-height: 0.76;
+
+    letter-spacing: -0.04em;
+
     text-transform: uppercase;
-    font-size: clamp(38px, 6vw, 72px);
-    line-height: 1.05;
-    color: var(--text-white);
-    letter-spacing: 0.5px;
+
+    color: var(--white);
 }
 
-.big-idea-heading span {
+.access-heading span {
+    display: block;
     color: var(--kfc-red);
 }
 
-.big-idea-line {
-    width: 70px;
-    height: 4px;
-    background: var(--kfc-red);
-    margin: 30px 0;
-}
 
-/* =====================================================
-   SUPPORTING COPY
-===================================================== */
-.big-idea-copy {
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.access-intro {
     max-width: 650px;
-}
 
-.big-idea-main-copy {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    margin-top: 2.5rem;
+    margin-left: 20%;
+
+    color: var(--muted-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.01em;
+
     text-transform: uppercase;
-    color: var(--text-white);
-    line-height: 1.6;
-    margin-bottom: 12px;
 }
 
-.big-idea-location {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-gray);
+
+/* =========================================================
+   ACCESS JOURNEY
+   ========================================================= */
+
+.access-journey {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 3rem auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    z-index: 5;
 }
 
-/* =====================================================
-   BOTTOM STATEMENT
-===================================================== */
-.big-idea-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--line-gray);
-    margin-top: 50px;
-    padding-top: 25px;
+
+/* =========================================================
+   ACCESS STEP
+   ========================================================= */
+
+.access-step {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 1.3rem 1.5rem 1.5rem 0;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
 }
 
-.big-idea-bottom span {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-gray);
+.access-step:not(:first-child) {
+    padding-left: 1.5rem;
 }
 
-.big-idea-bottom strong {
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    font-size: clamp(22px, 3vw, 34px);
-    text-transform: uppercase;
-    color: var(--text-white);
+.access-step:last-child {
+    border-right: none;
 }
 
-/* =====================================================
-   LOCATION TAG
-===================================================== */
-.big-idea-location-tag {
-    position: absolute;
-    top: 40px;
-    right: 60px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--text-white);
-    border: 1px solid var(--line-gray);
-    padding: 8px 16px;
-    border-radius: 30px;
+.access-step.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* =====================================================
-   FOOTER
-===================================================== */
-.page-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
-}
 
-.page-nav {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-white);
-    text-decoration: none;
-    transition: color 0.2s ease, opacity 0.2s ease;
-}
+/* =========================================================
+   NUMBER
+   ========================================================= */
 
-.page-nav:hover {
+.access-number {
+    display: block;
+
+    margin-bottom: 1.3rem;
+
     color: var(--kfc-red);
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: 2.8rem;
+
+    font-weight: 400;
+
+    line-height: 0.8;
 }
 
-.page-progress {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.access-step-label {
+    display: block;
+
+    margin-bottom: 0.55rem;
+
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.65rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
     text-transform: uppercase;
-    color: var(--text-gray);
 }
 
-.footer-line {
-    width: 40px;
-    height: 1px;
-    background: var(--line-gray);
+
+/* =========================================================
+   STEP HEADING
+   ========================================================= */
+
+.access-step h2 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(2.1rem, 3vw, 3.4rem);
+
+    font-weight: 400;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-@media (max-width: 768px) {
-    .big-idea-page {
-        padding: 25px 25px;
+
+/* =========================================================
+   STEP COPY
+   ========================================================= */
+
+.access-step p {
+    max-width: 250px;
+
+    margin-top: 1rem;
+
+    color: var(--muted-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    line-height: 1.55;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   BIG STATEMENT
+   ========================================================= */
+
+.access-statement {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 2.5rem auto 0;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+
+    gap: 1rem;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+    z-index: 5;
+}
+
+.access-statement.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.access-statement span {
+    color: var(--faint-white);
+
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-size: 0.65rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.access-statement strong {
+    color: var(--kfc-red);
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+
+    font-weight: 400;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.02em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PAGE 07 BACKGROUND
+   ========================================================= */
+
+.access-point-page::before {
+    content: "07";
+
+    position: absolute;
+
+    right: -2rem;
+    bottom: -5rem;
+
+    font-family: "Anton", Impact, sans-serif;
+
+    font-size: 24rem;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    pointer-events: none;
+}
+
+.access-point-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45vw;
+    height: 45vw;
+
+    right: -25vw;
+    top: 20vh;
+
+    border: 1px solid rgba(228, 0, 43, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .access-point-page {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 
-    .big-idea-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+    .access-point-top {
+        left: 2.5rem;
+        right: 2.5rem;
     }
 
-    .big-idea-location-tag {
-        position: static;
-        display: inline-block;
-        margin-top: 20px;
+    .access-heading {
+        font-size: clamp(5rem, 11vw, 9rem);
     }
 
-    .page-footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+    .access-intro {
+        margin-left: 10%;
     }
+
+    .access-journey {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .access-step:nth-child(2) {
+        border-right: none;
+    }
+
+    .access-step:nth-child(3),
+    .access-step:nth-child(4) {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .access-step:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .access-statement {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .access-point-page {
+        min-height: 100svh;
+
+        padding: 1.5rem 1.5rem 7rem;
+
+        overflow-y: auto;
+    }
+
+
+    /* TOP */
+
+    .access-point-top {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        margin-bottom: 4.5rem;
+    }
+
+    .access-point-top .page-label {
+        font-size: 0.6rem;
+    }
+
+    .access-point-top .page-number {
+        font-size: 0.55rem;
+    }
+
+
+    /* HERO */
+
+    .access-point-hero {
+        padding-top: 0;
+        min-height: auto;
+    }
+
+    .access-kicker {
+        font-size: 0.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .access-heading {
+        font-size: clamp(3.8rem, 17vw, 6.5rem);
+        line-height: 0.82;
+    }
+
+    .access-intro {
+        margin: 1.8rem 0 0;
+
+        max-width: 340px;
+
+        font-size: 0.68rem;
+
+        line-height: 1.55;
+    }
+
+
+    /* JOURNEY */
+
+    .access-journey {
+        margin-top: 3rem;
+
+        grid-template-columns: 1fr;
+    }
+
+    .access-step,
+    .access-step:not(:first-child) {
+
+        min-height: auto;
+
+        padding: 1.4rem 0;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .access-step:last-child {
+        border-bottom: none;
+    }
+
+    .access-number {
+        margin-bottom: 0.8rem;
+        font-size: 2.2rem;
+    }
+
+    .access-step h2 {
+        font-size: 2.4rem;
+    }
+
+    .access-step p {
+        margin-top: 0.6rem;
+        font-size: 0.62rem;
+    }
+
+
+    /* STATEMENT */
+
+    .access-statement {
+        margin-top: 2rem;
+
+        display: block;
+    }
+
+    .access-statement span {
+        display: block;
+
+        margin-bottom: 0.5rem;
+
+        font-size: 0.58rem;
+    }
+
+    .access-statement strong {
+        display: block;
+
+        font-size: clamp(2.8rem, 12vw, 4.2rem);
+    }
+
+
+    /* BACKGROUND */
+
+    .access-point-page::before {
+        right: -1rem;
+        bottom: 5rem;
+
+        font-size: 12rem;
+    }
+
+    .access-point-page::after {
+        width: 80vw;
+        height: 80vw;
+
+        right: -45vw;
+        top: 35vh;
+    }
+
+
+    /* FOOTER
+       USE THE EXISTING GLOBAL FOOTER
+       INSTEAD OF CREATING A SECOND ONE.
+    */
+
 }
