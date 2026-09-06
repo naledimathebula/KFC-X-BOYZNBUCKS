@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Homecoming — KFC X BOYZNBUCK$</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<main class="homecoming-page">
+
+    <!-- TOP BAR -->
+    <div class="homecoming-top">
+
+        <span class="page-label">
+            THE HOMECOMING
+        </span>
+
+        <span class="page-number">
+            06 / 10
+        </span>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <section class="homecoming-content">
+
+        <!-- MAIN TITLE -->
+        <header class="homecoming-header">
+
+            <div class="homecoming-kicker">
+                HOW IT WORKS? — A
+            </div>
+
+            <h1>
+                SYSTEM THAT
+                <span>PEOPLE</span>
+                WANT TO JOIN
+            </h1>
+
+        </header>
+
+
+        <!-- CONTENT SECTION -->
+        <section class="homecoming-story">
+
+            <div class="homecoming-number">
+                1.
+            </div>
+
+            <h2>
+                THE HOMECOMING
+                <span>(CONTENT)</span>
+            </h2>
+
+            <p>
+                KFC ANNOUNCES BOYZNBUCK$ RETURN AFTER
+                A LONG HIATUS, NO MALL, NO STAGE.
+                AND THE ONLY PLACE YOU CAN MEET THEM
+                IS AT THE KFC KENTUCKY TOWN.
+            </p>
+
+        </section>
+
+    </section>
+
+
+    <!-- CHICKEN BUCKET -->
+    <div class="homecoming-chicken">
+
+        <img
+            src="assets/chicken-bucket.png"
+            alt="KFC chicken bucket"
+        >
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+
+        <a href="big-idea.html" class="page-nav previous">
+            ← PREVIOUS
+        </a>
+
+        <div class="page-progress">
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+        <a href="mechanic.html" class="page-nav next">
+            NEXT →
+        </a>
+
+    </footer>
+
+</main>
+
+
+<!-- PAGE ANIMATION -->
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const header =
+        document.querySelector(".homecoming-header");
+
+    const story =
+        document.querySelector(".homecoming-story");
+
+    const chicken =
+        document.querySelector(".homecoming-chicken");
+
+
+    setTimeout(() => {
+        header.classList.add("show");
+    }, 150);
+
+
+    setTimeout(() => {
+        story.classList.add("show");
+    }, 450);
+
+
+    setTimeout(() => {
+        chicken.classList.add("show");
+    }, 750);
+
+});
+
+</script>
+
+</body>
+</html>
