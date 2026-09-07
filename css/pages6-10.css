@@ -1599,6 +1599,23 @@
 }
 
 
+.merch-styling {
+    padding-top: 20px;
+}
+
+.merch-styling p {
+    font-size: clamp(14px, 1.4vw, 17px);
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    color: var(--white);
+}
+
+.merch-styling p strong {
+    color: var(--kfc-red);
+}
+
+
 .page-footer {
     display: flex;
     justify-content: space-between;
