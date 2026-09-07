@@ -1499,9 +1499,8 @@
 }
 
 .merch-main-image {
-    flex: 1 1 380px;
-    max-width: 480px;
-    border-radius: 12px;
+    max-width: 250px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
